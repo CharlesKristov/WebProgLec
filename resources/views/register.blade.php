@@ -32,13 +32,13 @@
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <input type="text" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">Name</label>
+                    <label class="form-label" for="form3Example1">Full Name</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <input type="text" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Team name</label>
+                    <label class="form-label" for="form3Example2">Team Name</label>
                   </div>
                 </div>
               </div>
@@ -46,13 +46,13 @@
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <input type="file" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">ID Number</label>
+                    <label class="form-label" for="form3Example1">ID Card</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <input type="email" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Email address</label>
+                    <label class="form-label" for="form3Example2">Email Address</label>
                   </div>
                 </div>
               </div>
@@ -75,8 +75,8 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">Date of Birth</label>
+                    <input type="date" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">Date Of Birth</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
