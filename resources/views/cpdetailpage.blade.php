@@ -10,7 +10,7 @@
 <body>
         <div class="container">
         <h1 class = "text-center">Competitive Programming</h1>
-            <div class="container" style ="background-color:white">
+            <div class= "container" style ="background-color:white">
                 <h3>DESKRIPSI</h3>
                 <hr style ="color:gray">
                 <p style ="color:gray">Lomba pemrograman menguji kemampuan dan nalar 
