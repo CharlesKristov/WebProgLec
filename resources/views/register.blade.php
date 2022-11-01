@@ -18,7 +18,7 @@
             <img src="{{asset('images/Logo.png')}}" alt="" class="Logo">
         </div>
       </div>
-      <div class="col-lg-6 mb-5 mb-lg-0 position-relative" id="circleandform">
+      <div class="col-lg-6 mb-5 mb-lg-5 position-relative" id="circleandform">
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
         <div class="card bg-glass">
@@ -61,7 +61,7 @@
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <input type="password" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">Passowrd</label>
+                    <label class="form-label" for="form3Example1">Password</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
