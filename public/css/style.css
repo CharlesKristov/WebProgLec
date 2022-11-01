@@ -1,3 +1,10 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
 .background-radial-gradient {
     background-color: hsl(218, 41%, 15%);
     background-image: radial-gradient(650px circle at 0% 0%,
@@ -64,4 +71,61 @@
   .forgotandregis {
     display: flex;
     justify-content: space-between;
+  }
+
+
+  .contentTitle{
+    background-color: black;
+    opacity: 0.7;
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contentTitle .aboutUsTitle{
+    opacity: 100%;
+    color: white;
+    margin: 8px;
+  }
+
+  .aboutUsDesc{
+    color: white;
+    opacity: 100%;
+    margin: 8px;
+  }
+
+  .contentBody{
+    padding-bottom: 100px;
+  }
+  .lastEventTitle{
+    display: flex;
+    justify-content: center;
+    margin: 8px 0px;
+  }
+
+  .lastEventList{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .event{
+    display: flex;
+    justify-content: end;
+    background-color: lightslategray;
+    width: 160px;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    padding: 8px;
+  }
+
+  
+
+  .eventImg img{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
