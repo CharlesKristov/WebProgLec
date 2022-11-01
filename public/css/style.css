@@ -18,7 +18,7 @@
     height: 220px;
     width: 220px;
     top: -60px;
-    left: -130px;
+    left: -110px;
     background: radial-gradient(#44006b, #ad1fff);
     overflow: hidden;
   }
@@ -36,4 +36,42 @@
   .bg-glass {
     background-color: hsla(0, 0%, 100%, 0.9) !important;
     backdrop-filter: saturate(200%) blur(25px);
+  }
+
+
+  .logintitle {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+    color: hsl(218, 41%, 20%);
+  }
+
+  .logoimage {
+    position: relative;
+    top: 100px;
+  }
+
+  #circleandform {
+    position: relative;
+    top: 100px;
+  }
+
+  .form-check-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .loginbtn {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .loginbtn button {
+    width: 100%;
+  }
+
+  .forgotandregis {
+    display: flex;
+    justify-content: space-between;
   }
