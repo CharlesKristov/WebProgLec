@@ -28,7 +28,7 @@
         class="bg-image d-flex justify-content-center align-items-center"
         style="
             background-image: url('../images/room1.jpg');
-            height: 360px;
+            height: 480px;
             background-repeat: no-repeat;
             width: 100%;
             background-size: cover;
@@ -36,10 +36,9 @@
         "
         >
         <div class="titleQ">
-            <h1>Want to know about us?</h1>
             <div class="contentTitle">
                 <div class="aboutUsTitle">
-                    <h3>Technostalgia</h3>
+                    <h2 class="text-white">About Technostalgia</h2>
                 </div>
                 <div class="aboutUsDesc">
                     <p>Technostalgia Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deserunt molestias aliquam aspernatur nisi? Officia, laborum? Voluptatibus cupiditate officiis placeat eligendi natus velit. Molestiae, rerum ipsa. Repudiandae vel blanditiis non.</p>
@@ -54,7 +53,7 @@
     <div class="contentBody">
         <div class="containerLastEvent">
             <div class="lastEventTitle">
-                <h2>Our Last Event</h2>
+                <h2 class="text-white">Our Last Event</h2>
             </div>
             <hr style="border:1px outset;background-color:#000000;color:#000000;height:5px;width:50%" />
             <div class="lastEventList">
@@ -63,7 +62,7 @@
                         <img src='../images/High-school-comp-2015-MED.jpg' alt="">
                     </div>
                     <div class="eventDesc">
-                        <h5>Competitive Programming 21</h5>
+                        <h5 class="text-white">Competitive Programming 21</h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda harum hic molestias quidem ex nisi corporis repellat optio perferendis atque aliquam! Omnis quod facere nobis blanditiis sed. Quasi, odit.</p>
                     </div>
                 </div>
@@ -72,7 +71,7 @@
                         <img src='../images/Mercer-Programming-Competition.jpg' alt="">
                     </div>
                     <div class="eventDesc">
-                        <h5>Hackathon Marathon 22</h5>
+                        <h5 class="text-white">Hackathon Marathon 22</h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda harum hic molestias quidem ex nisi corporis repellat optio perferendis atque aliquam! Omnis quod facere nobis blanditiis sed. Quasi, odit.</p>
                     </div>
                 </div>
@@ -81,7 +80,7 @@
                         <img src='../images/UWF-ACM-Programming-Competition-.jpg' alt="">
                     </div>
                     <div class="eventDesc">
-                        <h5>Capture The Flag 25</h5>
+                        <h5 class="text-white">Capture The Flag 25</h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda harum hic molestias quidem ex nisi corporis repellat optio perferendis atque aliquam! Omnis quod facere nobis blanditiis sed. Quasi, odit.</p>
                     </div>
                 </div>
@@ -98,12 +97,12 @@
                     <div class="well well-sm">
                         <form class="form-horizontal" action="" method="post">
                             <fieldset>
-                                <legend class="text-center"><h1>Any Question? Contact us!</h1></legend>
+                                <legend class="text-center mt-4"><h1 class="text-white">Any Question? Contact us!</h1></legend>
                                 
                                 <!-- Name input-->
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="name">Name</label>
-                                    <div class="col-md-9">
+                                    <div class="inputCol">
                                         <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
                                     </div>
                                 </div>
@@ -111,7 +110,7 @@
                 <!-- Email input-->
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="email">Your E-mail</label>
-                    <div class="col-md-9">
+                    <div class="inputCol">
                         <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
                     </div>
                 </div>
@@ -119,14 +118,14 @@
                 <!-- Message body -->
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="message">Your message</label>
-                    <div class="col-md-9">
+                    <div class="inputCol">
                         <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
                     </div>
                 </div>
                 
                 <!-- Form actions -->
                 <div class="form-group">
-                    <div class="col-md-12 text-right">
+                    <div class="col-md-12 text-right mb-5">
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </div>
                 </div>
