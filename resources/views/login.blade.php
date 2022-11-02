@@ -61,7 +61,7 @@
                 <a href="" class="forgot">
                     forgot password?
                 </a>
-                <a href="" class="Regis">
+                <a href="{{Route('register')}}" class="Regis">
                     Don't have an account?
                 </a>
               </div>
