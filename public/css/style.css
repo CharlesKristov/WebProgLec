@@ -73,6 +73,21 @@
     justify-content: space-between;
   }
 
+  .containerLastEvent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titleQ{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: x-large;
+  }
 
   .contentTitle{
     background-color: black;
@@ -95,37 +110,87 @@
     margin: 8px;
   }
 
+
   .contentBody{
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
   .lastEventTitle{
     display: flex;
     justify-content: center;
     margin: 8px 0px;
+    font-size: 360px;
+    font-weight: 800;
   }
 
-  .lastEventList{
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .event{
-    display: flex;
-    justify-content: end;
-    background-color: lightslategray;
-    width: 160px;
-    flex-direction: column;
-    align-items: center;
-    height: 200px;
-    padding: 8px;
+  .lastEventTitle h2{
+    font-size: 60px;
+    font-weight: 800;
   }
 
   
+
+  .lastEventList{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    color: black;
+  }
+  
+  .event1{
+    display: flex;
+    justify-content: start;
+    background-color: white;
+    align-items: center;
+    height: 25%;
+  }
+
+  .event2{
+    display: flex;
+    justify-content: end;
+    background: rgb(53,79,126);
+    background: linear-gradient(90deg, rgba(53,79,126,1) 20%, rgba(31,47,76,1) 85%);
+    align-items: center;
+    height: 25%;
+    flex-direction: row-reverse;
+    color: white;
+  }
+    
+  .eventImg{
+    width:45%;
+    margin: 8px 16px;
+  }
 
   .eventImg img{
     width: 100%;
     position: relative;
     display: flex;
+    justify-content: start;
+    align-items: start;
+    margin: 8px 8px;
+  }
+
+  .eventDesc{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    padding: 32px;
+  }
+
+  .row{
     justify-content: center;
-    align-items: center;
+  }
+
+  .col-md-9{
+    width: 100%;
+  }
+
+  .contactUsContainer{
+    background: rgb(53,79,126);
+    background: linear-gradient(90deg, rgba(53,79,126,1) 20%, rgba(31,47,76,1) 85%);
+    color: white;
+  }
+
+  .btn{
+    width: 100%;
+    margin-top: 8px;
   }
