@@ -14,8 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('leaders', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('Full_Name');
+            $table->string('Role');
+            $table->string('Team_Name');
+            $table->string('ID_Card');
+            $table->string('Email');
+            $table->string('Password');
+            $table->date('DOB');
+            $table->string('Phone');
+            $table->string('Competition')->nullable();
+            $table->string('Payment_Status')->nullable();
         });
     }
 
