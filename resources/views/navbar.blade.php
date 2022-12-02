@@ -12,18 +12,12 @@
           <li class="dropdown"><a href="#"><span>Kategori Lomba</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{Route('cp')}}">Competitive Programming</a></li>
-              <li><a href="">Hackathon</a></li>
+              <li><a href="{{Route('hackathon')}}">Hackathon</a></li>
               <li><a href="#">Game Ideation</a></li>
               <li><a href="#">Capture The Flag</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Timeline</a></li>
-              <li><a href="{{Route('aboutus')}}">About Us</a></li>
-            </ul>
-          </li>
+          <li><a class="nav-link scrollto" href="{{Route('aboutus')}}">About Us</a></li>
          
           <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
         </ul>

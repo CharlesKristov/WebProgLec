@@ -33,3 +33,8 @@ Route::get('/cp', function () {
     return view('cpdetailpage');
 })->name('cp');
 
+Route::get('/hackathon', function () {
+    return view('hackathondetailpage');
+})->name('hackathon');
+
+

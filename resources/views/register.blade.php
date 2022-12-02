@@ -19,7 +19,7 @@
    <!-- Template Main CSS File -->
    <link href="assets/css/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Register</title>
 </head>
 <body class="background-radial-gradient overflow-hidden">
 
