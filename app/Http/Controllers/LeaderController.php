@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\leader;
 use Illuminate\Http\Request;
 
@@ -36,6 +36,25 @@ class LeaderController extends Controller
     public function store(Request $request)
     {
         //
+        $fullname = $request->get('fullname');
+        $teamname = $request->get('teamname');
+        $image = $request->get('id');
+        $email = $request->get('email');
+        $password = $request->get('password');
+        $dob = $request->get('dob');
+        $phone = $request->get('phone');
+
+        DB::table('leaders')->insert([
+            'full_name' => $fullname,
+            'role' => 'user',
+            'team_name' => $teamname,
+            'id_card' => $image,
+            'email' => $email,
+            'password' => $password,
+            'dob' => $dob,
+            'phone' => $dob
+        ]);
+        return redirect('/');
     }
 
     /**

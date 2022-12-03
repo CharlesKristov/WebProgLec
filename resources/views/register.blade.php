@@ -15,7 +15,7 @@
    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
- 
+
    <!-- Template Main CSS File -->
    <link href="assets/css/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,20 +37,20 @@
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
 
-            <form action="">
+            <form method="GET" action="/store_register">
                 <h1 class="logintitle"> Register </h1>
               <!-- 2 column grid layout with text inputs for the first and last names -->
 
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
+                    <input name="fullname" type="text" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Full Name</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" />
+                    <input name="teamname" type="text" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Team Name</label>
                   </div>
                 </div>
@@ -58,13 +58,13 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="file" id="form3Example1" class="form-control" />
+                    <input name="id" type="file" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">ID Card</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="email" id="form3Example2" class="form-control" />
+                    <input name="email" type="email" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Email Address</label>
                   </div>
                 </div>
@@ -73,7 +73,7 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="password" id="form3Example1" class="form-control" />
+                    <input name="password" type="password" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Password</label>
                   </div>
                 </div>
@@ -88,13 +88,13 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="date" id="form3Example1" class="form-control" />
+                    <input name="dob" type="date" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Date Of Birth</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" />
+                    <input name="phone" type="text" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Phone Number</label>
                   </div>
                 </div>
@@ -121,7 +121,7 @@
    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
    <script src="assets/vendor/php-email-form/validate.js"></script>
- 
+
    <!-- Template Main JS File -->
    <script src="{{asset('assets/js/main.js')}}"></script>
 </body>

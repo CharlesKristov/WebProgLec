@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LeaderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +38,4 @@ Route::get('/hackathon', function () {
     return view('hackathondetailpage');
 })->name('hackathon');
 
-
+Route::get('/store_register', [LeaderController::class, 'store']);
