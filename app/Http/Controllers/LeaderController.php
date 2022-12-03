@@ -33,18 +33,33 @@ class LeaderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function checkpass(Request $request){
+
+    }
+
     public function store(Request $request)
     {
+        $request->validate([
+            'fullname' => 'required',
+            'teamname' => 'required',
+            'id' => 'required',
+            'password' => 'required',
+            'confpass' => 'required',
+            'dob' => 'required',
+            'phone' => 'required',
+        ]);
         //
         $fullname = $request->get('fullname');
         $teamname = $request->get('teamname');
         $image = $request->get('id');
         $email = $request->get('email');
         $password = $request->get('password');
+        $confpass = $request->get('confpass');
         $dob = $request->get('dob');
         $phone = $request->get('phone');
 
-        DB::table('leaders')->insert([
+        if($password == $confpass){
+            DB::table('leaders')->insert([
             'full_name' => $fullname,
             'role' => 'user',
             'team_name' => $teamname,
@@ -53,8 +68,14 @@ class LeaderController extends Controller
             'password' => $password,
             'dob' => $dob,
             'phone' => $dob
-        ]);
-        return redirect('/');
+            ]);
+            return redirect('/');
+        }
+        else{
+            return back()->withErrors([
+                'password' => ['The provided password does not match our records.']
+            ]);
+        }
     }
 
     /**

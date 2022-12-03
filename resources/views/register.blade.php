@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="password" id="form3Example2" class="form-control" />
+                    <input name="confpass" type="password" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Confirm Password</label>
                   </div>
                 </div>
