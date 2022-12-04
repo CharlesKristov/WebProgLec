@@ -44,28 +44,56 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="fullname" type="text" id="form3Example1" class="form-control" />
+                    <input name="fullname" type="text" id="form3Example1" class="form-control @error('fullname')
+                        is-invalid
+                    @enderror " required value="{{ old('fullname') }}">
                     <label class="form-label" for="form3Example1">Full Name</label>
+                    @error('fullname')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="teamname" type="text" id="form3Example2" class="form-control" />
+                    <input name="teamname" type="text" id="form3Example2" class="form-control @error('teamname')
+                    is-invalid
+                    @enderror" required value="{{ old('teamname') }}">
                     <label class="form-label" for="form3Example2">Team Name</label>
+                    @error('teamname')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="id" type="file" id="form3Example1" class="form-control" />
+                    <input name="id" type="file" id="form3Example1" class="form-control @error('id')
+                    is-invalid
+                    @enderror" required value="{{ old('id') }}">
                     <label class="form-label" for="form3Example1">ID Card</label>
+                    @error('id')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="email" type="email" id="form3Example2" class="form-control" />
+                    <input name="email" type="email" id="form3Example2" class="form-control @error('email')
+                        is-invalid
+                    @enderror" required value="{{ old('email') }}">
                     <label class="form-label" for="form3Example2">Email Address</label>
+                    @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
               </div>
@@ -73,14 +101,28 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="password" type="password" id="form3Example1" class="form-control" />
+                    <input name="password" type="password" id="form3Example1" class="form-control  @error('password')
+                    is-invalid
+                    @enderror" >
                     <label class="form-label" for="form3Example1">Password</label>
+                    @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="confpass" type="password" id="form3Example2" class="form-control" />
+                    <input name="confpass" type="password" id="form3Example2" class="form-control @error('confpass')
+                    is-invalid
+                    @enderror">
                     <label class="form-label" for="form3Example2">Confirm Password</label>
+                    @error('confpass')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
               </div>
@@ -88,14 +130,28 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="dob" type="date" id="form3Example1" class="form-control" />
+                    <input name="dob" type="date" id="form3Example1" class="form-control @error('dob')
+                    is-invalid
+                    @enderror" required value="{{ old('dob') }}">
                     <label class="form-label" for="form3Example1">Date Of Birth</label>
+                    @error('dob')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6">
                   <div class="form-outline">
-                    <input name="phone" type="text" id="form3Example2" class="form-control" />
+                    <input name="phone" type="text" id="form3Example2" class="form-control @error('phone')
+                    is-invalid
+                    @enderror" required value="{{ old('phone') }}">
                     <label class="form-label" for="form3Example2">Phone Number</label>
+                    @error('phone')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                   </div>
                 </div>
               </div>

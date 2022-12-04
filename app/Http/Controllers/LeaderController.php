@@ -43,6 +43,7 @@ class LeaderController extends Controller
             'fullname' => 'required',
             'teamname' => 'required',
             'id' => 'required',
+            'email' => 'required|email:dns',
             'password' => 'required',
             'confpass' => 'required',
             'dob' => 'required',
@@ -67,13 +68,13 @@ class LeaderController extends Controller
             'email' => $email,
             'password' => $password,
             'dob' => $dob,
-            'phone' => $dob
+            'phone' => $phone
             ]);
             return redirect('/');
         }
         else{
             return back()->withErrors([
-                'password' => ['The provided password does not match our records.']
+                'confpass' => ['Pasword does not match!']
             ]);
         }
     }
