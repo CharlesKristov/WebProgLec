@@ -36,11 +36,12 @@ Route::get('/aboutus', function () {
 })->name('aboutus');
 
 Route::get('/cp', function () {
-    return view('cpdetailpage');
+    return view('detail/cp');
 })->name('cp');
 
 Route::get('/hackathon', function () {
-    return view('hackathondetailpage');
+    return view('detail/hackathon');
 })->name('hackathon');
+
 
 Route::get('/store_register', [LeaderController::class, 'store']);
