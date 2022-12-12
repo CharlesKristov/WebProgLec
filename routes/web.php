@@ -48,7 +48,7 @@ Route::get('/ideation', function () {
 })->name('ideation');
 
 Route::get('/capturetheflag', function () {
-    return view('detail/capture');
+    return view('detail/ctf');
 })->name('capturetheflag');
 
 
