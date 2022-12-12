@@ -38,10 +38,18 @@ Route::get('/aboutus', function () {
 Route::get('/cp', function () {
     return view('detail/cp');
 })->name('cp');
-
+ 
 Route::get('/hackathon', function () {
     return view('detail/hackathon');
 })->name('hackathon');
+
+Route::get('/ideation', function () {
+    return view('detail/ideation');
+})->name('ideation');
+
+Route::get('/capturetheflag', function () {
+    return view('detail/capture');
+})->name('capturetheflag');
 
 
 Route::get('/store_register', [LeaderController::class, 'store']);
