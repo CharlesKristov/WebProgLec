@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('Phone');
             $table->string('Competition')->nullable();
             $table->string('Payment_Status')->nullable();
+            $table->timestamps();
         });
     }
 

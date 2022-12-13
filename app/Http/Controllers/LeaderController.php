@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use App\Models\leader;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LeaderController extends Controller
 {
@@ -16,25 +19,41 @@ class LeaderController extends Controller
     {
         //
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function login(Request $req)
     {
-        //
+        //$newpass = Hash::make($req->password);
+        $leaders = leader::where(['password'=>$req->password, 'email'=>$req->email])->first();
+        // if(!$leader || !Hash::check($req->password, $leader->password)){
+        //     return back()->withErrors([
+        //         'email' => 'The provided credentials do not match our records.',
+        //     ]);
+        // }
+        if(!$leaders){
+            return back()->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ]);
+        }
+        else{
+            $req->session()->put('leaders',$leaders);
+            return redirect('dashboard');
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function checkpass(Request $request){
+    public function verif(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required'
+        ]);
 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('dashboard');
+        }
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
     }
 
     public function store(Request $request)
@@ -43,7 +62,7 @@ class LeaderController extends Controller
             'fullname' => 'required',
             'teamname' => 'required',
             'id' => 'required',
-            'email' => 'required|email:dns',
+            'email' => 'required|email:dns|unique:leaders',
             'password' => 'required',
             'confpass' => 'required',
             'dob' => 'required',
@@ -66,6 +85,7 @@ class LeaderController extends Controller
             'team_name' => $teamname,
             'id_card' => $image,
             'email' => $email,
+            // 'password' => Hash::make($password),
             'password' => $password,
             'dob' => $dob,
             'phone' => $phone
@@ -78,6 +98,27 @@ class LeaderController extends Controller
             ]);
         }
     }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function checkpass(Request $request){
+
+    }
+
+
 
     /**
      * Display the specified resource.

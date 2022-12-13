@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeaderController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
@@ -22,6 +23,10 @@ use App\Models\leader;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
 Route::get('/login', function () {
     return view('login');
@@ -44,3 +49,4 @@ Route::get('/hackathon', function () {
 })->name('hackathon');
 
 Route::get('/store_register', [LeaderController::class, 'store']);
+Route::get('/user_login', [LeaderController::class, 'login']);
