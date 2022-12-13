@@ -21,17 +21,10 @@ class LeaderController extends Controller
     }
     public function login(Request $req)
     {
-        //$newpass = Hash::make($req->password);
-        $leaders = leader::where(['Password'=>$req->password, 'Email'=>$req->email])->first();
-        // if(!$leader || !Hash::check($req->password, $leader->password)){
-        //     return back()->withErrors([
-        //         'email' => 'The provided credentials do not match our records.',
-        //     ]);
-        // }
-
-        if(!$leaders){
+        $leaders = leader::where(['email'=>$req->email])->first();
+        if(!$leaders || !Hash::check($req->password, $leaders->Password)){
             return back()->withErrors([
-                'email' => 'The provided credentials do not match our records.',
+                'email' => 'The provided credentials do not match our records.'
             ]);
         }
 
@@ -92,8 +85,8 @@ class LeaderController extends Controller
             'team_name' => $teamname,
             'id_card' => $image,
             'email' => $email,
-            // 'password' => Hash::make($password),
-            'password' => $password,
+            'password' => Hash::make($password),
+            // 'password' => $password,
             'dob' => $dob,
             'phone' => $phone
             ]);

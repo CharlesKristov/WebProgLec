@@ -43,7 +43,7 @@ Route::get('/aboutus', function () {
 Route::get('/cp', function () {
     return view('detail/cp');
 })->name('cp');
- 
+
 Route::get('/hackathon', function () {
     return view('detail/hackathon');
 })->name('hackathon');
