@@ -37,27 +37,27 @@
           <div class="card-body px-4 py-5 px-md-5">
 
             <form method="GET" action="/user_login" >
-                <h1 class="logintitle"> Login Now </h1>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <h1 class="logintitle"> Login Now </h1>
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
 
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input name="email" type="email" id="form3Example3" class="form-control @error('email')
-                is-invalid
-                @enderror" placeholder="Enter email address" required value="{{ old('email') }}">
-                <label class="form-label" for="form3Example3">Email address</label>
-                @error('email')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input name="email" type="email" id="form3Example3" class="form-control @error('email')
+                    is-invalid
+                    @enderror" placeholder="Enter email address" required value="{{ old('email') }}">
+                    <label class="form-label" for="form3Example3">Email address</label>
+                    @error('email')
+                      <div class="invalid-feedback">
+                          {{ $message }}
+                      </div>
                     @enderror
-              </div>
+                  </div>
 
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input name="password" type="password" id="form3Example4" class="form-control  @error('password')
-                is-invalid
-            @enderror" placeholder="Enter password">
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input name="password" type="password" id="form3Example4" class="form-control  @error('password')
+                    is-invalid
+                @enderror" placeholder="Enter password">
                 <label class="form-label" for="form3Example4">Password</label>
                     @error('password')
                         <div class="invalid-feedback">

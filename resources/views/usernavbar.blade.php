@@ -19,6 +19,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -27,31 +28,22 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<header id="header" class="d-flex align-items-center bg-danger">
+<header id="header" class="d-flex align-items-center bg-primary">
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
         
-        <a href="index.html" class="scrollto"><img src="{{('assets/img/technostalgia.png')}}" alt="" title=""></a>
+        <a href="#" class="scrollto"><img src="{{('assets/img/technostalgia.png')}}" alt="" title=""></a>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto" href="{{Route('home')}}">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Kategori Lomba</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="{{Route('cp')}}">Competitive Programming</a></li>
-              <li><a href="{{Route('hackathon')}}">Hackathon</a></li>
-              <li><a href="{{Route('ideation')}}">Game Ideation</a></li>
-              <li><a href="{{Route('capturetheflag')}}">Capture The Flag</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="{{Route('aboutus')}}">About Us</a></li>
-         
-          <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
+          <li><a class="nav-link scrollto text-white" href="#">User Dashboard</a></li>
+          <li><a class="nav-link scrollto text-white" href="#">Payment</a></li>
+          <li><a class="nav-link scrollto text-white" href="#">Timeline</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto" href="{{Route('login')}}">Login</a>
+      <a class="buy-tickets scrollto text-white" href="#">Logout</a>
     </div>
   </header><!-- End Header -->

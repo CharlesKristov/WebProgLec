@@ -22,20 +22,27 @@ class LeaderController extends Controller
     public function login(Request $req)
     {
         //$newpass = Hash::make($req->password);
-        $leaders = leader::where(['password'=>$req->password, 'email'=>$req->email])->first();
+        $leaders = leader::where(['Password'=>$req->password, 'Email'=>$req->email])->first();
         // if(!$leader || !Hash::check($req->password, $leader->password)){
         //     return back()->withErrors([
         //         'email' => 'The provided credentials do not match our records.',
         //     ]);
         // }
+
         if(!$leaders){
             return back()->withErrors([
                 'email' => 'The provided credentials do not match our records.',
             ]);
         }
-        else{
+
+        if($leaders->Password == $req->password){
             $req->session()->put('leaders',$leaders);
             return redirect('dashboard');
+        }
+        else{
+            return back()->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ]);
         }
     }
 
