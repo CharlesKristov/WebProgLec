@@ -13,8 +13,8 @@
             <ul>
               <li><a href="{{Route('cp')}}">Competitive Programming</a></li>
               <li><a href="{{Route('hackathon')}}">Hackathon</a></li>
-              <li><a href="#">Game Ideation</a></li>
-              <li><a href="#">Capture The Flag</a></li>
+              <li><a href="{{Route('ideation')}}">Game Ideation</a></li>
+              <li><a href="{{Route('capturetheflag')}}">Capture The Flag</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{{Route('aboutus')}}">About Us</a></li>
