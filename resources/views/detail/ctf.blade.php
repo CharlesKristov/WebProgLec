@@ -23,6 +23,14 @@
 </head>
 <body>
     @extends('navbar')
+    @extends('navbar')
+    <section id="hero" style="height: 50vh">
+        <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+          <h1 class="mb-4 pb-0">Technostalgia</h1>
+          <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
+          <a href="{{Route('register')}}" class="about-btn scrollto">REGISTER</a>
+        </div>
+      </section><!-- End Hero Section -->
     <br><br><br><br>
     <div class="container">
         <h1 class = "text-center">Capture The Flag</h1>
@@ -86,5 +94,15 @@
 
         </div>
     </div>
+    @extends('footer')
+     <!-- Vendor JS Files -->
+   <script src="assets/vendor/aos/aos.js"></script>
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+   <script src="assets/vendor/php-email-form/validate.js"></script>
+
+   <!-- Template Main JS File -->
+   <script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 </html>
