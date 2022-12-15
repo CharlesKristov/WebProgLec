@@ -27,15 +27,9 @@ class LeaderController extends Controller
                 'email' => 'The provided credentials do not match our records.'
             ]);
         }
-
-        if($leaders->Password == $req->password){
+        else{
             $req->session()->put('leaders',$leaders);
             return redirect('dashboard');
-        }
-        else{
-            return back()->withErrors([
-                'email' => 'The provided credentials do not match our records.',
-            ]);
         }
     }
 

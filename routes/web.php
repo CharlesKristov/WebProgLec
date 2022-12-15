@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
@@ -57,5 +58,5 @@ Route::get('/capturetheflag', function () {
 })->name('capturetheflag');
 
 
-Route::get('/store_register', [LeaderController::class, 'store']);
-Route::get('/user_login', [LeaderController::class, 'login']);
+Route::get('/store_register', [RegisterController::class, 'store']);
+Route::get('/user_login', [LoginController::class, 'login']);
