@@ -44,6 +44,6 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto text-white" href="#">Logout</a>
+      <a class="buy-tickets scrollto text-white" href="/user_logout">Logout</a>
     </div>
   </header><!-- End Header -->
