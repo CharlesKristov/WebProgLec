@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('leaders', function (Blueprint $table) {
+            $table->id()->autoIncrement();
             $table->string('Full_Name');
             $table->string('Role');
             $table->string('Team_Name');
