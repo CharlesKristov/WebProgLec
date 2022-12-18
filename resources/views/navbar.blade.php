@@ -1,3 +1,12 @@
+<?php
+
+  if(session()->has('leaders')){
+    return redirect()->to('dashboard')->send();
+  }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\leader;
 use App\Models\User;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -143,9 +144,26 @@ class LeaderController extends Controller
      * @param  \App\Models\leader  $leader
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, leader $leader)
+    public function update(Request $request)
     {
-        //
+        //input value to leader table for competition
+        // dd($request);
+        $validated = $request->validate([
+            'leader_name'=>'',
+            'competition'=>'required|IN:Capture The Flag,Game Ideation,Hackathon,Competitive Programming'
+        ]);
+        $value = $request->session()->get('leaders');
+        $team_name = $value->Team_Name;
+
+
+        DB::table('leaders')
+              ->where('Team_Name' ,$team_name)
+              ->update(['Competition' => $request->competition]);
+
+        // dd($leader_name);
+
+        return redirect()->to('dashboard')->send();
+
     }
 
     /**

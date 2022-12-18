@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -60,3 +61,7 @@ Route::get('/capturetheflag', function () {
 
 Route::get('/store_register', [RegisterController::class, 'store']);
 Route::get('/user_login', [LoginController::class, 'login']);
+Route::get('/user_logout', [LoginController::class, 'logout']);
+
+Route::get('/competition_store', [LeaderController::class, 'update']);
+Route::post('/member_store', [MemberController::class, 'store']);

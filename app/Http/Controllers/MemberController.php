@@ -36,6 +36,13 @@ class MemberController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'fullname' => 'required',
+            'leadername' => 'required',
+            'email' => 'required|email:dns|unique:leaders',
+            'dob' => 'required',
+            'phone' => 'required',
+        ]);
     }
 
     /**
