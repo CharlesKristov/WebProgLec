@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
 </head>
-<body class="background-radial-gradient overflow-hidden">
+<body class="background-radial-gradient">
   @extends('navbar')
   <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
     <div class="row gx-lg-5 align-items-center mb-5">
