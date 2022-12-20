@@ -19,12 +19,13 @@ return new class extends Migration
             $table->string('Role');
             $table->string('Team_Name');
             $table->string('ID_Card');
-            $table->string('Email');
-            $table->string('Password');
+            $table->string('email');
+            $table->string('password');
             $table->date('DOB');
             $table->string('Phone');
             $table->string('Competition')->nullable();
             $table->string('Payment_Status')->nullable();
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }

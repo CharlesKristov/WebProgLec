@@ -68,7 +68,7 @@
 
               <!-- Checkbox -->
               <div class="form-check">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                <input class="form-check-input me-2" type="checkbox" value="rem" id="rem" name="rem">
                 <div class="form-check-text">
                     <label class="form-check-label" for="form2Example33">
                         Remember me

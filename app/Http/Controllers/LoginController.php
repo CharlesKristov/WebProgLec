@@ -13,11 +13,22 @@ class LoginController extends Controller
     public function login(Request $req)
     {
         $leaders = leader::where(['email'=>$req->email])->first();
-        if(!$leaders || !Hash::check($req->password, $leaders->Password)){
+        $this->validate($req, [
+            "email" => "required|email",
+            "password" => "required"
+        ]);
+
+        if(!Auth::attempt(['email' => $req->email, 'password' => $req->password], $req->rem)){
             return back()->withErrors([
                 'email' => 'The provided credentials do not match our records.'
             ]);
         }
+
+        // if(!$leaders || !Hash::check($req->password, $leaders->Password)){
+        //     return back()->withErrors([
+        //         'email' => 'The provided credentials do not match our records.'
+        //     ]);
+        // }
         else{
             $req->session()->put('leaders',$leaders);
             return redirect('dashboard');
@@ -29,6 +40,6 @@ class LoginController extends Controller
         return redirect('/');
     }
 
-    
+
 
 }
