@@ -1743,3 +1743,7 @@ h6 {
   background: rgb(31,47,76);
 background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
 }
+
+.eventDesc a{
+  width: 30%;
+}

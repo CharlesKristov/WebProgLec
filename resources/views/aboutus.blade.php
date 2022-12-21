@@ -24,31 +24,15 @@
 <body>
     @extends('navbar')
     <div class="content-top">
-        <div
-        class="bg-image d-flex justify-content-center align-items-center"
-        style="
-            background-image: url('../images/room1.jpg');
-            height: 480px;
-            background-repeat: no-repeat;
-            width: 100%;
-            background-size: cover;
-            background-position: center;
-        "
-        >
-        <div class="titleQ">
-            <div class="contentTitle">
-                <div class="aboutUsTitle">
-                    <h2 class="text-white">About Technostalgia</h2>
-                </div>
-                <div class="aboutUsDesc">
-                    <p>Technostalgia Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deserunt molestias aliquam aspernatur nisi? Officia, laborum? Voluptatibus cupiditate officiis placeat eligendi natus velit. Molestiae, rerum ipsa. Repudiandae vel blanditiis non.</p>
-                </div>
+        <section id="hero" style="height: 70vh">
+            <div class="hero-container">
+                <h1 class="mb-4 pb-0">About Technostalgia</h1>
+              <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
+              {{-- <a href="{{Route('register')}}" class="about-btn scrollto">REGISTER</a> --}}
             </div>
-        </div>
-
-            
-        </div>
+        </section><!-- End Hero Section -->
     </div>
+
 
     <div class="contentBody">
         <div class="containerLastEvent">
@@ -61,9 +45,12 @@
                     <div class="eventImg">
                         <img src='../images/High-school-comp-2015-MED.jpg' alt="">
                     </div>
-                    <div class="eventDesc">
+                    <div class="eventDesc d-flex flex-col ">
                         <h5 class="text-white">Competitive Programming 21</h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda harum hic molestias quidem ex nisi corporis repellat optio perferendis atque aliquam! Omnis quod facere nobis blanditiis sed. Quasi, odit.</p>
+                        <a href="{{Route('cp')}}" class="float-end flex-end">
+                            <button class="btn btn-primary">View More</button>
+                        </a>
                     </div>
                 </div>
                 <div class="event2">
@@ -73,6 +60,9 @@
                     <div class="eventDesc">
                         <h5 class="text-white">Hackathon Marathon 22</h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda harum hic molestias quidem ex nisi corporis repellat optio perferendis atque aliquam! Omnis quod facere nobis blanditiis sed. Quasi, odit.</p>
+                        <a href="{{Route('hackathon')}}">
+                            <button class="btn btn-primary">View More</button>
+                        </a>
                     </div>
                 </div>
                 <div class="event1">
@@ -82,6 +72,21 @@
                     <div class="eventDesc">
                         <h5 class="text-white">Capture The Flag 25</h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda harum hic molestias quidem ex nisi corporis repellat optio perferendis atque aliquam! Omnis quod facere nobis blanditiis sed. Quasi, odit.</p>
+                        <a href="{{Route('capturetheflag')}}" >
+                            <button class="btn btn-primary">View More</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="event2">
+                    <div class="eventImg">
+                        <img src='../images/Mercer-Programming-Competition.jpg' alt="">
+                    </div>
+                    <div class="eventDesc">
+                        <h5 class="text-white">Game Ideation 22</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda harum hic molestias quidem ex nisi corporis repellat optio perferendis atque aliquam! Omnis quod facere nobis blanditiis sed. Quasi, odit.</p>
+                        <a href="{{Route('ideation')}}">
+                            <button class="btn btn-primary">View More</button>
+                        </a>
                     </div>
                 </div>
             </div>
