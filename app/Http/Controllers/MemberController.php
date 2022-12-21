@@ -36,8 +36,6 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        // dd('helo');
-        //
 
         $leader = leader::find(session()->get('leaders')->id);
 
@@ -48,9 +46,7 @@ class MemberController extends Controller
             'dob' => 'required',
             'Phone' => 'required',
         ]);
-        // dd($request);
         $member = new member($request->only(['Full_Name', 'Email', 'dob', 'Phone']));
-        // dd($member);
         $leader->member()->save($member);
 
         return redirect()->to('dashboard')->send();
