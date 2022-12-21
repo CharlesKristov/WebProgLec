@@ -54,6 +54,14 @@ Route::get('/ideation', function () {
     return view('detail/ideation');
 })->name('ideation');
 
+Route::get('/timeline', function () {
+    return view('timeline');
+})->name('timeline');
+
+Route::get('/payment', function () {
+    return view('payment');
+})->name('payment');
+
 Route::get('/capturetheflag', function () {
     return view('detail/ctf');
 })->name('capturetheflag');

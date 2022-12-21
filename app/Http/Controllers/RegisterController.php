@@ -13,14 +13,14 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'fullname' => 'required',
-            'teamname' => 'required',
+            'fullname' => 'required|min:5|max:30',
+            'teamname' => 'required|min:3|max:20|unique:leaders',
             'id' => 'required',
             'email' => 'required|email:dns|unique:leaders',
-            'password' => 'required',
-            'confpass' => 'required',
+            'password' => 'required|min:8',
+            'confpass' => 'required|min:8',
             'dob' => 'required',
-            'phone' => 'required',
+            'phone' => 'required|min:11',
         ]);
         //
         $fullname = $request->get('fullname');
@@ -44,7 +44,20 @@ class RegisterController extends Controller
             'dob' => $dob,
             'phone' => $phone
             ]);
-            return redirect('/');
+            //$name = $request->file('id_card')->getClientOriginalName();
+            //$path = $request->file('id_card')->store('public/images');
+            //$save = new File;
+            //$save->name = $name;
+            //$save->path = $path;
+            // $size = $request->file('id')->getSize();
+            // $name = $request->file('id')->getClientOriginalName();
+            // $request->file('id')->store('public/images');
+            // $save = new Photo;
+            // $save->name = $name;
+            // $save->size = $size;
+
+            // $save->save();
+            return redirect('dashboard');
         }
         else{
             return back()->withErrors([
