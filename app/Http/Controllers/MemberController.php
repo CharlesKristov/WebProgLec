@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\leader;
 use App\Models\member;
 use Illuminate\Http\Request;
 
@@ -35,14 +36,20 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $leader = leader::find(session()->get('leaders')->id);
+
+        // dd($leader->id);
         $request->validate([
-            'fullname' => 'required',
-            'leadername' => 'required',
-            'email' => 'required|email:dns|unique:leaders',
+            'Full_Name' => 'required',
+            'Email' => 'required|email:dns|unique:members',
             'dob' => 'required',
-            'phone' => 'required',
+            'Phone' => 'required',
         ]);
+        $member = new member($request->only(['Full_Name', 'Email', 'dob', 'Phone']));
+        $leader->member()->save($member);
+
+        return redirect()->to('dashboard')->send();
     }
 
     /**

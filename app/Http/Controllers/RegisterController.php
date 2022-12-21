@@ -14,7 +14,7 @@ class RegisterController extends Controller
     {
         $request->validate([
             'fullname' => 'required|min:5|max:30',
-            'teamname' => 'required|min:3|max:20|unique:leaders',
+            'teamname' => 'required|min:3|max:20',
             'id' => 'required',
             'email' => 'required|email:dns|unique:leaders',
             'password' => 'required|min:8',
@@ -57,7 +57,7 @@ class RegisterController extends Controller
             // $save->size = $size;
 
             // $save->save();
-            return redirect('dashboard');
+            return redirect('login');
         }
         else{
             return back()->withErrors([

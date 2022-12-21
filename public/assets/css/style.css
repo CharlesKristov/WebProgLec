@@ -140,7 +140,7 @@ h6 {
 --------------------------------------------------------------*/
 #header {
   height: 90px;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
@@ -1737,4 +1737,9 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+.dashboard-bg{
+  background: rgb(31,47,76);
+background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
 }

@@ -1,5 +1,6 @@
 <?php 
 
+    
 
     $data = session()->all(); 
 
@@ -8,13 +9,14 @@
     //
     // dd($leaderSession->Team_Name);
     $leader = DB::table('leaders')
-                ->where('Team_Name', '=', $leaderSession->Team_Name)
+                ->where('id', '=', $leaderSession->id)
                 ->get()->first();
+
                 // dd($leader);
     // echo $leader->Team_Name;
     $members = DB::table('leaders')
-            ->join('members', 'leaders.Full_Name', '=', 'members.Leader_Name')
-            ->where('leaders.Full_Name', '=', $leader->Full_Name)
+            ->join('members', 'leaders.id', '=', 'members.Leader_id')
+            ->where('leaders.id', '=', $leader->id)
             ->get();
     }
     else {
@@ -33,18 +35,21 @@
         @extends('usernavbar')
     </div>
     
-    <div class="content-top w-100">
-        <div class="bg-black d-flex justify-content-center align-items-center p-5 w-100">
+    <div class="dashboard-bg content-top w-100 text-white d-flex flex-column justify-content-center">
+
+
+
+        <div class=" d-flex justify-content-center align-items-center p-5 mt-5 w-100">
             <div class="titleQ">
                 <div class="contentTitle">
-                    <div class="aboutUsTitle p-5">
-                        <h2 class="text-white">HI TEAM {{$leader->Team_Name}} !</h2>
+                    <div class="aboutUsTitle mt-3">
+                        <h2 class="text">Hi Team {{$leader->Team_Name}} !</h2>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container d-flex justify-content-center align-items-start flex-column">
+        <div class="competitionHeader container d-flex justify-content-center align-items-center flex-column mb-3">
             <h2 class="">Current Competition:
                 @if ($leader->Competition==null)
                 -
@@ -54,7 +59,9 @@
             </h2>
             
             <h2 class="">Leader: {{$leader->Full_Name}}</h2>
-            <hr>
+        </div>
+
+        <div class="container d-flex justify-content-start align-items-start flex-column">
             <h2 class="">Member:
                 @if (count($members) <= 0)
                     -
@@ -93,21 +100,16 @@
 
             <div class="container mb-5">
                 
-                <form action="" method="post">
+                <form action="/member_store" method="post">
+                    @csrf
                     @if (count($members) < 2)
-                        
                         <h3>Add Member:</h3>
-                        
                         <label for="Full_Name">Full Name</label>
                         <input type="text"
                         class="form-control" name="Full_Name" id="Full_Name" aria-describedby="helpId" placeholder="">
 
-                        <label for="Leader_Name">Leader Name</label>
-                        <input type="text"
-                        class="form-control" name="Leader_Name" id="Leader_Name" aria-describedby="helpId" placeholder="">
-                        
                         <label for="Email">Email</label>
-                        <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="">
+                        <input type="email" class="form-control" name="Email" id="" aria-describedby="emailHelpId" placeholder="">
                         
                         <label class="form-label" for="form3Example1">Date Of Birth</label>
                         <input name="dob" type="date" id="form3Example1" class="form-control">

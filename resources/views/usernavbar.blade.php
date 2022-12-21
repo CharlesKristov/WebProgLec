@@ -28,7 +28,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<header id="header" class="d-flex align-items-center bg-primary">
+<header id="header" class="d-flex align-items-center">
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">

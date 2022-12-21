@@ -18,10 +18,10 @@ return new class extends Migration
             $table->unsignedBigInteger('Leader_id');
             $table->foreign('Leader_id')->references('id')->on('leaders');
             $table->string('Full_Name');
-            $table->string('Leader_Name');
             $table->string('Email');
             $table->date('DOB');
             $table->string('Phone');
+            $table->timestamps();
         });
     }
 
