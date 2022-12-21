@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('Phone');
             $table->string('Competition')->nullable();
             $table->string('Payment_Status')->nullable();
+            $table->string('Payment_Photo')->nullable();
             $table->string('remember_token')->nullable();
             $table->timestamps();
         });
