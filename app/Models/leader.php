@@ -37,4 +37,9 @@ class leader extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function member(){
+        return $this->hasMany(member::class);
+    }
 }

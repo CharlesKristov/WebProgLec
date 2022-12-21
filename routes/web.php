@@ -60,7 +60,7 @@ Route::get('/capturetheflag', function () {
 
 
 Route::get('/store_register', [RegisterController::class, 'store']);
-Route::get('/user_login', [LoginController::class, 'login']);
+Route::post('/user_login', [LoginController::class, 'login']);
 Route::get('/user_logout', [LoginController::class, 'logout']);
 
 Route::get('/competition_store', [LeaderController::class, 'update']);

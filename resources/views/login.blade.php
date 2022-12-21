@@ -36,7 +36,8 @@
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
 
-            <form method="GET" action="/user_login" >
+            <form method="POST" action="/user_login" >
+              @csrf
                     <h1 class="logintitle"> Login Now </h1>
                   <!-- 2 column grid layout with text inputs for the first and last names -->
 
