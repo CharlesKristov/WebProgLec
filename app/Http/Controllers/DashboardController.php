@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\Session\Session;
+use Illuminate\Contracts\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -10,10 +10,8 @@ class DashboardController extends Controller
 {
     //
     public function CheckSession(){
-        $data = session()->all(); 
-
         if (session()->has('leaders')) {
-        $leaderSession = Session::get('leaders');
+        $leaderSession = session()->get('leaders');
         //
         // dd($leaderSession->Team_Name);
         $leader = DB::table('leaders')
@@ -27,7 +25,12 @@ class DashboardController extends Controller
                 ->where('leaders.id', '=', $leader->id)
                 ->get();
 
-            return redirect('dashboard');
+
+            return view('dashboard', 
+            ['leader' => $leader,
+             'members' => $members
+            ]
+            );
         }
         else {
             // return redirect()->route('home');

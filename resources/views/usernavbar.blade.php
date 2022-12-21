@@ -38,12 +38,31 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto text-white" href="#">User Dashboard</a></li>
-          <li><a class="nav-link scrollto text-white" href="#">Payment</a></li>
-          <li><a class="nav-link scrollto text-white" href="#">Timeline</a></li>
+          <li><a class="nav-link scrollto text-white" href="{{Route('dashboard')}}">User Dashboard</a></li>
+          <li><a class="nav-link scrollto text-white" href="{{Route('payment')}}">Payment</a></li>
+          <li><a class="nav-link scrollto text-white" href="{{Route('timeline')}}">Timeline</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <a class="buy-tickets scrollto text-white" href="/user_logout">Logout</a>
     </div>
   </header><!-- End Header -->
+
+  <footer id="footer">
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Technostalgia</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+      -->
+        Designed by <a href="https://bootstrapmade.com/">Technostalgia Commitee </a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->

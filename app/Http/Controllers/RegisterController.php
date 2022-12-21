@@ -19,7 +19,7 @@ class RegisterController extends Controller
             'email' => 'required|email:dns|unique:leaders',
             'password' => 'required|min:8',
             'confpass' => 'required|min:8',
-            'dob' => 'required',
+            'dob' => 'required|date',
             'phone' => 'required|min:11',
         ]);
         //

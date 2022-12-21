@@ -43,7 +43,7 @@ class MemberController extends Controller
         $request->validate([
             'Full_Name' => 'required',
             'Email' => 'required|email:dns|unique:members',
-            'dob' => 'required',
+            'dob' => 'required|date',
             'Phone' => 'required',
         ]);
         $member = new member($request->only(['Full_Name', 'Email', 'dob', 'Phone']));

@@ -2,32 +2,29 @@
 
     
 
-    $data = session()->all(); 
+    // $data = session()->all(); 
 
-    if (session()->has('leaders')) {
-    $leaderSession = Session::get('leaders');
-    //
-    // dd($leaderSession->Team_Name);
-    $leader = DB::table('leaders')
-                ->where('id', '=', $leaderSession->id)
-                ->get()->first();
+    // if (session()->has('leaders')) {
+    // $leaderSession = Session::get('leaders');
+    // //
+    // // dd($leaderSession->Team_Name);
+    // $leader = DB::table('leaders')
+    //             ->where('id', '=', $leaderSession->id)
+    //             ->get()->first();
 
-                // dd($leader);
-    // echo $leader->Team_Name;
-    $members = DB::table('leaders')
-            ->join('members', 'leaders.id', '=', 'members.Leader_id')
-            ->where('leaders.id', '=', $leader->id)
-            ->get();
-    }
-    else {
-        // return redirect()->route('home');
-        return redirect()->to('/')->send();
+    //             // dd($leader);
+    // // echo $leader->Team_Name;
+    // $members = DB::table('leaders')
+    //         ->join('members', 'leaders.id', '=', 'members.Leader_id')
+    //         ->where('leaders.id', '=', $leader->id)
+    //         ->get();
+    // }
+    // else {
+    //     // return redirect()->route('home');
+    //     return redirect()->to('/')->send();
 
-    }
+    // }
 
-    // dd($members);
-    // $count = count($members);
-    // dd($count);
 ?>  
 
 <body>
@@ -57,8 +54,13 @@
                 {{ $leader->Competition }}
                 @endif
             </h2>
-            
-            <h2 class="">Leader: {{$leader->Full_Name}}</h2>
+            @if ($leader->Payment_Status == null)
+                <h2 class="">Payment Status: Haven't done payment!</h2>
+                @elseif ($leader->Payment_Status == "unverified")
+                <h2 class="">Payment Status: <span class="text-danger"> Unverifed Payment!</span></h2>
+                @elseif($leader->Payment_Status == "verified")
+                <h2 class="">Payment Status: <span class="text-success"> Verifed Payment!</span></h2>
+            @endif
         </div>
 
         <div class="container d-flex justify-content-start align-items-start flex-column">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\LoginController;
@@ -26,9 +27,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');
+
+Route::get('dashboard', [DashboardController::class, 'CheckSession'])->name('dashboard');;
+
 
 Route::get('/login', function () {
     return view('login');
