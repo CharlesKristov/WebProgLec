@@ -14,7 +14,7 @@ class RegisterController extends Controller
     {
         $request->validate([
             'fullname' => 'required|min:5|max:30',
-            'teamname' => 'required|min:3|max:20',
+            'Team_Name' => 'required|min:3|max:20|unique:leaders',
             'id' => 'required',
             'email' => 'required|email:dns|unique:leaders',
             'password' => 'required|min:8',
@@ -24,7 +24,7 @@ class RegisterController extends Controller
         ]);
         //
         $fullname = $request->get('fullname');
-        $teamname = $request->get('teamname');
+        $teamname = $request->get('Team_Name');
         $image = $request->get('id');
         $email = $request->get('email');
         $password = $request->get('password');
