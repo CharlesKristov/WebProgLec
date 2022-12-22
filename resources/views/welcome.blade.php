@@ -288,64 +288,64 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/1.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/1.jpg" alt="" class="img-fluid">
+              <a href="images/1.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/1.jpg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/2.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/2.jpg" alt="" class="img-fluid">
+              <a href="images/2.jpeg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/2.jpeg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/3.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/3.jpg" alt="" class="img-fluid">
+              <a href="images/3.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/3.jpg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/4.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/4.jpg" alt="" class="img-fluid">
+              <a href="images/4.jpeg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/4.jpeg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/5.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/5.jpg" alt="" class="img-fluid">
+              <a href="images/5.jpeg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/5.jpeg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/6.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/6.jpg" alt="" class="img-fluid">
+              <a href="images/6.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/6.jpg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/7.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/7.jpg" alt="" class="img-fluid">
+              <a href="images/7.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/7.jpg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/8.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/8.jpg" alt="" class="img-fluid">
+              <a href="images/8.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="images/8.jpg" alt="" class="img-fluid" style="height: 269.5px">
               </a>
             </div>
           </div>
