@@ -114,11 +114,11 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="confpass" type="password" id="form3Example2" class="form-control @error('confpass')
+                    <input name="password_confirmation" type="password" id="form3Example2" class="form-control @error('password_confirmation')
                     is-invalid
                     @enderror">
                     <label class="form-label" for="form3Example2">Confirm Password</label>
-                    @error('confpass')
+                    @error('confirm_password')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>

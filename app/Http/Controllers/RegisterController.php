@@ -17,8 +17,8 @@ class RegisterController extends Controller
             'Team_Name' => 'required|min:3|max:20|unique:leaders',
             'id' => 'required',
             'email' => 'required|email:dns|unique:leaders',
-            'password' => 'required|min:8',
-            'confpass' => 'required|min:8',
+            'password' => 'required|min:8|confirmed|alpha_num',
+            'password_confirmation' => 'required',
             'dob' => 'required|date',
             'phone' => 'required|min:11',
         ]);
@@ -28,12 +28,10 @@ class RegisterController extends Controller
         $image = $request->get('id');
         $email = $request->get('email');
         $password = $request->get('password');
-        $confpass = $request->get('confpass');
         $dob = $request->get('dob');
         $phone = $request->get('phone');
 
-        if($password == $confpass){
-            DB::table('leaders')->insert([
+        DB::table('leaders')->insert([
             'full_name' => $fullname,
             'role' => 'user',
             'team_name' => $teamname,
@@ -58,11 +56,5 @@ class RegisterController extends Controller
 
             // $save->save();
             return redirect('login');
-        }
-        else{
-            return back()->withErrors([
-                'confpass' => ['Pasword does not match!']
-            ]);
-        }
     }
 }
