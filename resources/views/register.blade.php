@@ -57,11 +57,11 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="teamname" type="text" id="form3Example2" class="form-control @error('teamname')
+                    <input name="Team_Name" type="text" id="form3Example2" class="form-control @error('Team_Name')
                     is-invalid
-                    @enderror" required value="{{ old('teamname') }}">
+                    @enderror" required value="{{ old('Team_Name') }}">
                     <label class="form-label" for="form3Example2">Team Name</label>
-                    @error('teamname')
+                    @error('Team_Name')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -114,11 +114,11 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input name="confpass" type="password" id="form3Example2" class="form-control @error('confpass')
+                    <input name="password_confirmation" type="password" id="form3Example2" class="form-control @error('password_confirmation')
                     is-invalid
                     @enderror">
                     <label class="form-label" for="form3Example2">Confirm Password</label>
-                    @error('confpass')
+                    @error('confirm_password')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
