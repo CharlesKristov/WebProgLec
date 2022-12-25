@@ -52,7 +52,7 @@
             <button type="button" id="dropDetail2" class="btn dropdown-toggle" data-bs-toggle="dropdown" onclick="toggleDetail2()"></button>
         </div>
         <div class="details" id="detail2">
-            <p>Lakukan pembayaran pendaftaran lomba Technostalgia per tim ke nomor rekening 5273149429 bank BCA atas nama</p>
+            <p>Lakukan pembayaran pendaftaran lomba Technostalgia per tim ke nomor rekening 5271846763 bank BCA atas nama Albertus Ryan Dharmala</p>
         </div>
 
         <div class="steps">
@@ -70,15 +70,21 @@
         <div class="details" id="detail4">
             <p>Data tim dan bukti pembayaran akan diverifikasi dalam waktu 72 jam setelah tim mengunggah file. Apabila tim belum mendapat notifikasi verifikasi lebih dari 72 jam, tim dapat menghubungi contact person. Tim yang telah mendapat email verifikasi dinyatakan resmi sebagai calon peserta dari lomba Technostalgia </p>
         </div>
-        <div class="file-upload">
-            <input class="form-control" type="file" id="formFile">
+        <form method="POST" class="file-upload" action="{{route('payment.uploadreceipt')}}" enctype="multipart/form-data">
+            @csrf
+            <input name="receipt" type="file" id="form3Example1" class="form-control @error('receipt')
+                    is-invalid
+                    @enderror" required value="{{ old('receipt') }}">
+                    @error('receipt')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
             <button>Submit</button>
-        </div>
+        </form>
     </div>
 
  </section>
-
-  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

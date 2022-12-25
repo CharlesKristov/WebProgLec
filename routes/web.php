@@ -6,6 +6,7 @@ use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
@@ -77,3 +78,6 @@ Route::get('/user_logout', [LoginController::class, 'logout']);
 
 Route::get('/competition_store', [LeaderController::class, 'update']);
 Route::post('/member_store', [MemberController::class, 'store']);
+
+
+Route::post('/payment', [PaymentController::class, 'uploadreceipt'])->name('payment.uploadreceipt');
