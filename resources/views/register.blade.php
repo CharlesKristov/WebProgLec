@@ -37,7 +37,8 @@
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
 
-            <form method="GET" action="/store_register">
+            <form method="POST" action="/store_register" enctype="multipart/form-data">
+                @csrf
                 <h1 class="logintitle"> Register </h1>
               <!-- 2 column grid layout with text inputs for the first and last names -->
 

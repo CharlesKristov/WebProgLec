@@ -15,14 +15,20 @@ class RegisterController extends Controller
         $request->validate([
             'fullname' => 'required|min:5|max:30',
             'Team_Name' => 'required|min:3|max:20|unique:leaders',
-            'id' => 'required',
+            'id' => 'required|mimes:png,jpg,jpeg',
             'email' => 'required|email:dns|unique:leaders',
             'password' => 'required|min:8|confirmed|alpha_num',
             'password_confirmation' => 'required',
             'dob' => 'required|date',
             'phone' => 'required|min:11',
         ]);
-        //
+        $original_name = $request->file('id');
+        $name = $original_name->getClientOriginalName();
+        //$ext = $original_name->getClientOriginalExtension();
+        $file_name = 'images/' . $name ;
+        //$original_name->storeAs('public/image', $file_name);
+        $original_name->move('images', $file_name);
+
         $fullname = $request->get('fullname');
         $teamname = $request->get('Team_Name');
         $image = $request->get('id');
@@ -35,7 +41,7 @@ class RegisterController extends Controller
             'full_name' => $fullname,
             'role' => 'user',
             'team_name' => $teamname,
-            'id_card' => $image,
+            'id_card' => $file_name,
             'email' => $email,
             'password' => Hash::make($password),
             // 'password' => $password,

@@ -71,7 +71,7 @@ Route::get('/capturetheflag', function () {
 })->name('capturetheflag');
 
 
-Route::get('/store_register', [RegisterController::class, 'store']);
+Route::post('/store_register', [RegisterController::class, 'store']);
 Route::post('/user_login', [LoginController::class, 'login']);
 Route::get('/user_logout', [LoginController::class, 'logout']);
 
