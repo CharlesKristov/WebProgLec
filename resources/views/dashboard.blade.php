@@ -40,40 +40,56 @@
             <div class="titleQ">
                 <div class="contentTitle">
                     <div class="aboutUsTitle mt-3">
-                        <h2 class="text">Hi Team {{$leader->Team_Name}} !</h2>
+                        <h2 class="text">Hi Team {{$leader->Team_Name}}!</h2>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="competitionHeader container d-flex justify-content-center align-items-center flex-column mb-3">
-            <h2 class="">Current Competition:
+        <div class="competitionHeader container d-flex justify-content-start align-items-center flex-column mb-3">
+            <h4 class="">Competition:
                 @if ($leader->Competition==null)
                 -
                 @else
                 {{ $leader->Competition }}
                 @endif
-            </h2>
+            </h4>
             @if ($leader->Payment_Status == null)
-                <h2 class="">Payment Status: Haven't done payment!</h2>
+                <h4 class="">Payment Status: Haven't done payment!</h4>
                 @elseif ($leader->Payment_Status == "unverified")
-                <h2 class="">Payment Status: <span class="text-danger"> Unverifed Payment!</span></h2>
+                <h4 class="">Payment Status: <span class="text-danger"> Unverifed Payment!</span></h4>
                 @elseif($leader->Payment_Status == "verified")
-                <h2 class="">Payment Status: <span class="text-success"> Verifed Payment!</span></h2>
+                <h4 class="">Payment Status: <span class="text-success"> Verifed Payment!</span></h4>
             @endif
         </div>
 
-        <div class="container d-flex justify-content-start align-items-start flex-column">
-            <h2 class="">Member:
+        <div class="container d-flex align-items-center flex-column text-black text-center">
+            <div class="card" style = "width: 18rem;background: linear-gradient(to right, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);">
+                <div class="card-body">
+                    <h3 class="card-title">Leader</h3>
+                    <hr>
+                    <h6 class="card-subtitle mb-2"> {{$leader->Full_Name}} </h6>
+                    <p class ="card-text"> {{$leader->email}} </p>
+                    {{$leader->Phone}}
+                </div>
+            </div>  
+                <br>
                 @if (count($members) <= 0)
                     -
                 @elseif (count($members) <= 2 ) 
                     @foreach ($members as $m)
-                        <h3 >Name: {{ $m->Full_Name}}</h3>
-                        <h3 >Email: {{ $m->Email}}</h3>
+                    <div class="card" style = "width: 18rem; background: linear-gradient(to right, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);">
+                        <div class="card-body">
+                            <h4 class="card-title">Member</h4>
+                            <hr>
+                            <h6 class="card-subtitle mb-2">{{ $m->Full_Name }}</h6>
+                            <p class ="card-text"> {{$m->Email}} </p>
+                            {{$m->Phone}}
+                        </div>
+                    </div>
+                    <br>
                     @endforeach
                 @endif
-            </h2>
 
             <hr>
 
