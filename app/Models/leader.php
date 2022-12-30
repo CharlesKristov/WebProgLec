@@ -39,7 +39,7 @@ class leader extends Authenticatable
     ];
 
 
-    public function member(){
-        return $this->hasMany(member::class);
+    public function members(){
+        return $this->hasMany(member::class, 'Leader_id');
     }
 }

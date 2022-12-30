@@ -13,6 +13,6 @@ class member extends Model
     
 
     public function leader(){
-        return $this->belongsTo(leader::class);
+        return $this->belongsTo(leader::class, 'Leader_id');
     }
 }

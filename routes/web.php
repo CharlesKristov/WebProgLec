@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardAdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\LoginController;
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\leader;
+
 
 
 /*
@@ -81,3 +83,8 @@ Route::post('/member_store', [MemberController::class, 'store']);
 
 
 Route::post('/payment', [PaymentController::class, 'uploadreceipt'])->name('payment.uploadreceipt');
+
+
+//TEMPORARY
+
+Route::get('dashboardadmin', [DashboardAdminController::class, 'index']);
