@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    //
+    public function index(){
+        return view('home.login');
+    }
     public function login(Request $req)
     {
         $leaders = leader::where(['email'=>$req->email])->first();
