@@ -2,7 +2,6 @@
 
 @section('title', 'Competitive Programming')  
 @section('main-content')
-<body>
     <section id="hero" style="height: 50vh">
         <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
             <h1 class="mb-4 pb-0">Technostalgia</h1>
@@ -84,6 +83,4 @@
 
             </div>  
         </div>
-        
-</body>
 @endsection

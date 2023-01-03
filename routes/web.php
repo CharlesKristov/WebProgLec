@@ -36,36 +36,21 @@ Route::get('/competition/ideation', [HomeController::class, 'viewIdeation'])->na
 Route::get('/competition/ctf', [HomeController::class, 'viewCtf'])->name('capturetheflag');
 
 //User Dashboard Route
-Route::get('dashboard', [DashboardController::class, 'CheckSession'])->name('dashboard');;
-
+Route::get('dashboard', [DashboardController::class, 'CheckSession'])->name('dashboard');
+Route::get('dashboard/payment', [DashboardController::class, 'viewPayment'])->name('payment');
+Route::post('dashboard/payment/upload', [PaymentController::class, 'uploadreceipt'])->name('payment.uploadreceipt');
+Route::get('competition_store', [LeaderController::class, 'update']);
+Route::get('dashboard/timeline', [DashboardController::class, 'viewTimeline'])->name('timeline');
+Route::post('member_store', [MemberController::class, 'store']);
 
 //Login and Logout Route
-Route::get('/login', [LoginController::class, 'index'])->name('loginPage');
-Route::post('/user_login', [LoginController::class, 'login'])->name('login');
-Route::get('/user_logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('login', [LoginController::class, 'index'])->name('loginPage');
+Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 //Register Route
 Route::get('register', [RegisterController::class, 'index'])->name('registerPage');
-Route::post('/store_register', [RegisterController::class, 'store'])->name('register');
+Route::post('store_register', [RegisterController::class, 'store'])->name('register');
 
-
-Route::get('/timeline', function () {
-    return view('timeline');
-})->name('timeline');
-
-Route::get('/payment', function () {
-    return view('payment');
-})->name('payment');
-
-
-
-Route::get('/competition_store', [LeaderController::class, 'update']);
-Route::post('/member_store', [MemberController::class, 'store']);
-
-
-Route::post('/payment', [PaymentController::class, 'uploadreceipt'])->name('payment.uploadreceipt');
-
-
-//TEMPORARY
-
-Route::get('dashboardadmin', [DashboardAdminController::class, 'index']);
+// admin route
+Route::get('admin', [DashboardAdminController::class, 'index'])->name('admin');

@@ -26,7 +26,7 @@ class DashboardController extends Controller
                 ->get();
 
 
-            return view('dashboard', 
+            return view('user-dashboard.dashboard', 
             ['leader' => $leader,
              'members' => $members
             ]
@@ -37,5 +37,13 @@ class DashboardController extends Controller
             return redirect()->to('/')->send();
     
         }
+    }
+
+    public function viewPayment(){
+        return view('user-dashboard.payment');
+    }
+
+    public function viewTimeline(){
+        return view('user-dashboard.timeline');
     }
 }

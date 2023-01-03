@@ -30,7 +30,7 @@
 <body>
 
   <!-- ======= Header ======= -->
- @extends('usernavbar')
+  @extends('include.user-navbar')
   <main id="main" >
     <!-- ======= Schedule Section ======= -->
     <section id="schedule" class="section-with-bg bg-warning">

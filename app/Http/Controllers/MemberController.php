@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\leader;
 use App\Models\member;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MemberController extends Controller
 {
@@ -37,7 +38,7 @@ class MemberController extends Controller
     public function store(Request $request)
     {
 
-        $leader = leader::find(session()->get('leaders')->id);
+        $leader = leader::find(Auth::user()->id);
 
         // dd($leader->id);
         $request->validate([
@@ -47,7 +48,7 @@ class MemberController extends Controller
             'Phone' => 'required',
         ]);
         $member = new member($request->only(['Full_Name', 'Email', 'dob', 'Phone']));
-        $leader->member()->save($member);
+        $leader->members()->save($member);
 
         return redirect()->to('dashboard')->send();
     }
