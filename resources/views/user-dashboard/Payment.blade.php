@@ -1,8 +1,7 @@
 @extends('layout.app')
 @section('title', 'Upload Payment')
-    
+
 @section('main-content')
-    
 
   <!-- ======= Header ======= -->
  <section id="payment" class="bg-warning">
@@ -63,28 +62,5 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Template Main JS File -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
-  <script>
-    $(document).ready(function(){
-        $('#dropDetail1').click(function() {
-            $('#detail1').toggle("slide");
-        });
-    });
-    $(document).ready(function(){
-        $('#dropDetail2').click(function() {
-            $('#detail2').toggle("slide");
-        });
-    });
-    $(document).ready(function(){
-        $('#dropDetail3').click(function() {
-            $('#detail3').toggle("slide");
-        });
-    });
-    $(document).ready(function(){
-        $('#dropDetail4').click(function() {
-            $('#detail4').toggle("slide");
-        });
-    });
-  </script>
-</body>
+
 @endsection

@@ -54,3 +54,4 @@ Route::post('store_register', [RegisterController::class, 'store'])->name('regis
 
 // admin route
 Route::get('admin', [DashboardAdminController::class, 'index'])->name('admin');
+

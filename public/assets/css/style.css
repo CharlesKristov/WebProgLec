@@ -1535,14 +1535,19 @@ h6 {
     justify-content: center;
     margin:auto;
     padding-right: 10px;
+    width: 300px;
     display: flex;
     text-align: center;
 }
 
 .steps button {
+    width: 9.5%;
+    margin: auto;
     border: white;
     background-color: white;
     color: #5900c6;
+    justify-content: center;
+    align-items: center;
 }
 
 .details {
@@ -1861,7 +1866,7 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
     opacity: 100%;
     margin: 8px;
   }
-  
+
   .lastEventTitle{
     display: flex;
     justify-content: center;
@@ -1883,7 +1888,7 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
     flex-direction: column;
     color: white;
   }
-  
+
   .event1{
     display: flex;
     justify-content: start;
@@ -1894,7 +1899,7 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
     color: white;
   }
 
-  
+
 
   .event2{
     display: flex;
@@ -1906,7 +1911,7 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
     flex-direction: row-reverse;
     color: white;
   }
-    
+
   .eventImg{
     width:45%;
     margin: 8px 16px;
@@ -1948,8 +1953,8 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
   }
 
 
- 
-  
+
+
   .background-radial-gradient {
       background-color: hsl(218, 41%, 15%);
       background-image: radial-gradient(650px circle at 0% 0%,
@@ -1965,7 +1970,7 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
           hsl(218, 41%, 19%) 80%,
           transparent 100%);
     }
-  
+
     #radius-shape-1 {
       height: 220px;
       width: 220px;
@@ -1974,7 +1979,7 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
       background: radial-gradient(#44006b, #ad1fff);
       overflow: hidden;
     }
-  
+
     #radius-shape-2 {
       border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
       bottom: -60px;
@@ -1984,42 +1989,42 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
       background: radial-gradient(#44006b, #ad1fff);
       overflow: hidden;
     }
-  
+
     .bg-glass {
       background-color: hsla(0, 0%, 100%, 0.9) !important;
       backdrop-filter: saturate(200%) blur(25px);
     }
-  
-  
+
+
     .logintitle {
       display: flex;
       justify-content: center;
       padding-bottom: 5%;
       color: hsl(218, 41%, 20%);
     }
-  
+
     .form-check-text {
       display: flex;
       justify-content: space-between;
     }
-  
+
     .loginbtn {
       margin-top: 20px;
       justify-content: center;
       display: flex;
     }
-  
+
     .loginbtn button {
       width: 100%;
     }
-  
+
     .forgotandregis {
       display: flex;
       justify-content: space-between;
     }
-  
-   
-  
+
+
+
     .contentBody{
       /* padding-bottom: 100px; */
     }
@@ -2030,21 +2035,21 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
       font-size: 360px;
       font-weight: 800;
     }
-  
+
     .lastEventTitle h2{
       font-size: 60px;
       font-weight: 800;
       margin: 0;
     }
-  
-  
+
+
     .lastEventList{
       display: flex;
       justify-content: start;
       flex-direction: column;
       color: white;
     }
-    
+
     .event1{
       display: flex;
       justify-content: start;
@@ -2054,9 +2059,9 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
       height: 25%;
       color: white;
     }
-  
-    
-  
+
+
+
     .event2{
       display: flex;
       justify-content: end;
@@ -2067,12 +2072,12 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
       flex-direction: row-reverse;
       color: white;
     }
-      
+
     .eventImg{
       width:45%;
       margin: 8px 16px;
     }
-  
+
     .eventImg img{
       width: 100%;
       position: relative;
@@ -2081,28 +2086,27 @@ background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
       align-items: start;
       margin: 8px 8px;
     }
-  
+
     .eventDesc{
       display: flex;
       flex-direction: column;
       margin: 16px;
       padding: 32px;
     }
-  
+
     .row{
       justify-content: center;
     }
-  
+
     .inputCol{
       width: 100%;
     }
-  
+
     .contactUsContainer{
       background: rgb(31,47,76);
       background: linear-gradient(90deg, rgba(31,47,76,1) 20%, rgba(23,7,32,1) 85%);
       color: white;
     }
-  
- 
-    
-  
+
+
+
