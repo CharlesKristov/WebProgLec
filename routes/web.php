@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardAdminController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\LoginController;
@@ -26,65 +27,31 @@ use App\Models\leader;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+//Home Route
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/aboutus', [HomeController::class, 'viewAboutUs'])->name('aboutus');
+Route::get('/competition/cp', [HomeController::class, 'viewCp'])->name('cp');
+Route::get('/competition/hackathon', [HomeController::class, 'viewHackathon'])->name('hackathon');
+Route::get('/competition/ideation', [HomeController::class, 'viewIdeation'])->name('ideation');
+Route::get('/competition/ctf', [HomeController::class, 'viewCtf'])->name('capturetheflag');
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
+//User Dashboard Route
+Route::get('dashboard', [DashboardController::class, 'CheckSession'])->name('dashboard');
+Route::get('dashboard/payment', [DashboardController::class, 'viewPayment'])->name('payment');
+Route::post('dashboard/payment/upload', [PaymentController::class, 'uploadreceipt'])->name('payment.uploadreceipt');
+Route::get('competition_store', [LeaderController::class, 'update']);
+Route::get('dashboard/timeline', [DashboardController::class, 'viewTimeline'])->name('timeline');
+Route::post('member_store', [MemberController::class, 'store']);
 
-Route::get('dashboard', [DashboardController::class, 'CheckSession'])->name('dashboard');;
+//Login and Logout Route
+Route::get('login', [LoginController::class, 'index'])->name('loginPage');
+Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
+//Register Route
+Route::get('register', [RegisterController::class, 'index'])->name('registerPage');
+Route::post('store_register', [RegisterController::class, 'store'])->name('register');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+// admin route
+Route::get('admin', [DashboardAdminController::class, 'index'])->name('admin');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
-
-Route::get('/aboutus', function () {
-    return view('aboutus');
-})->name('aboutus');
-
-Route::get('/cp', function () {
-    return view('detail/cp');
-})->name('cp');
-
-Route::get('/hackathon', function () {
-    return view('detail/hackathon');
-})->name('hackathon');
-
-Route::get('/ideation', function () {
-    return view('detail/ideation');
-})->name('ideation');
-
-Route::get('/timeline', function () {
-    return view('timeline');
-})->name('timeline');
-
-Route::get('/payment', function () {
-    return view('payment');
-})->name('payment');
-
-Route::get('/capturetheflag', function () {
-    return view('detail/ctf');
-})->name('capturetheflag');
-
-
-Route::post('/store_register', [RegisterController::class, 'store']);
-Route::post('/user_login', [LoginController::class, 'login']);
-Route::get('/user_logout', [LoginController::class, 'logout']);
-
-Route::get('/competition_store', [LeaderController::class, 'update']);
-Route::post('/member_store', [MemberController::class, 'store']);
-
-
-Route::post('/payment', [PaymentController::class, 'uploadreceipt'])->name('payment.uploadreceipt');
-
-
-//TEMPORARY
-
-Route::get('dashboardadmin', [DashboardAdminController::class, 'index']);

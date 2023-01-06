@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    //
+    public function index(){
+        return view('home.login');
+    }
     public function login(Request $req)
     {
         $leaders = leader::where(['email'=>$req->email])->first();
@@ -30,13 +32,17 @@ class LoginController extends Controller
         //     ]);
         // }
         else{
-            $req->session()->put('leaders',$leaders);
-            return redirect('dashboard');
+           if(Auth::user()->Role=="user"){
+                return redirect('user-dashboard.dashboard');
+           }else{
+                return redirect('admin-dashboard.dashboard');
+           }
+            
         }
     }
 
     public function logout(Request $request){
-        $request->session()->flush();
+        Auth::logout();
         return redirect('/');
     }
 

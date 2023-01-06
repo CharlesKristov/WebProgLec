@@ -10,6 +10,11 @@ use App\Models\leader;
 class RegisterController extends Controller
 {
     //
+
+    public function index(){
+        return view('home.register');
+    }
+    
     public function store(Request $request)
     {
         $request->validate([
