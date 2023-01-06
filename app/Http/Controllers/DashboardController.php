@@ -33,6 +33,7 @@ class DashboardController extends Controller
             );
         }
         else {
+            dd("aaa");
             // return redirect()->route('home');
             return redirect()->to('/')->send();
     

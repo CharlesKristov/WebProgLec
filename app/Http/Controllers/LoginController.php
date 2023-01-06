@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\leader;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Session\Session;
 
 class LoginController extends Controller
 {
@@ -33,7 +34,8 @@ class LoginController extends Controller
         // }
         else{
            if(Auth::user()->Role=="user"){
-                return redirect('/dashboard');
+                $req->session()->put('leaders',$leaders);
+                return redirect('dashboard');
            }else{
                 return redirect('admin-dashboard.dashboard');
            }
