@@ -33,7 +33,7 @@ class LoginController extends Controller
         // }
         else{
            if(Auth::user()->Role=="user"){
-                return redirect('user-dashboard.dashboard');
+                return redirect('/dashboard');
            }else{
                 return redirect('admin-dashboard.dashboard');
            }
