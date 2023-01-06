@@ -26,10 +26,10 @@
     // }
 
 ?>  
-
+@extends('layout.app')
 <body>
     <div class="top">
-        @extends('usernavbar')
+        @extends('include.user-navbar')
     </div>
     
     <div class="dashboard-bg content-top w-100 text-white d-flex flex-column justify-content-center">
