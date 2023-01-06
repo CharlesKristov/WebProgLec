@@ -121,7 +121,7 @@
                 <form action="/member_store" method="post">
                     @csrf
                     @if (count($members) < 2)
-                    <br>
+                    <br><br>
                         <h3>Add Member:</h3>
                         <label for="Full_Name">Full Name</label>
                         <input type="text"
