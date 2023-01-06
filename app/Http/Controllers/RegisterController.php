@@ -14,7 +14,7 @@ class RegisterController extends Controller
     public function index(){
         return view('home.register');
     }
-    
+
     public function store(Request $request)
     {
         $request->validate([
@@ -24,15 +24,15 @@ class RegisterController extends Controller
             'email' => 'required|email:dns|unique:leaders',
             'password' => 'required|min:8|confirmed|alpha_num',
             'password_confirmation' => 'required',
-            'dob' => 'required|date',
+            'dob' => 'required|date|before_or_equal:today',
             'phone' => 'required|min:11',
         ]);
         $original_name = $request->file('id');
-        $name = $original_name->getClientOriginalName();
-        //$ext = $original_name->getClientOriginalExtension();
-        $file_name = 'images/' . $name ;
+        $name = $request->get('Team_Name');
+        $ext = $original_name->getClientOriginalExtension();
+        $file_name = 'KTP_image/' . $name . '.' . $ext;
         //$original_name->storeAs('public/image', $file_name);
-        $original_name->move('images', $file_name);
+        $original_name->move('storage/app/KTP_image', $file_name);
 
         $fullname = $request->get('fullname');
         $teamname = $request->get('Team_Name');
