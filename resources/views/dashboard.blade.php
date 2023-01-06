@@ -116,18 +116,19 @@
 
             </div>
 
-            <div class="container mb-5">
+            <div class="container mb-5 text-white">
                 
                 <form action="/member_store" method="post">
                     @csrf
                     @if (count($members) < 2)
+                    <br>
                         <h3>Add Member:</h3>
                         <label for="Full_Name">Full Name</label>
                         <input type="text"
-                        class="form-control" name="Full_Name" id="Full_Name" aria-describedby="helpId" placeholder="">
+                        class="form-control" name="Full_Name" id="Full_Name" aria-describedby="helpId" placeholder="Full Name"></input>
 
                         <label for="Email">Email</label>
-                        <input type="email" class="form-control" name="Email" id="" aria-describedby="emailHelpId" placeholder="">
+                        <input type="email" class="form-control" name="Email" id="" aria-describedby="emailHelpId" placeholder=""></input>
                         
                         <label class="form-label" for="form3Example1">Date Of Birth</label>
                         <input name="dob" type="date" id="form3Example1" class="form-control">
