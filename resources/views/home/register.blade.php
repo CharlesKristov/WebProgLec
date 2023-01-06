@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('title', 'Register')
 
-    
+
 
 <body class="background-radial-gradient">
   @section('main-content')
