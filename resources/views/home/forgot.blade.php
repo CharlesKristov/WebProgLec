@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Login')
+@section('title', 'Forgot')
 
 @section('main-content')
 
@@ -18,9 +18,9 @@
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
 
-            <form method="POST" action="{{Route('login')}}" >
+            <form method="POST" action="{{Route('forgot')}}" >
               @csrf
-                    <h1 class="logintitle"> Login Now </h1>
+                    <h1 class="logintitle"> Forgot Password</h1>
                   <!-- 2 column grid layout with text inputs for the first and last names -->
 
                   <!-- Email input -->
@@ -36,42 +36,17 @@
                     @enderror
                   </div>
 
-                  <!-- Password input -->
-                  <div class="form-outline mb-4">
-                    <input name="password" type="password" id="form3Example4" class="form-control  @error('password')
-                    is-invalid
-                @enderror" placeholder="Enter password">
-                <label class="form-label" for="form3Example4">Password</label>
-                    @error('password')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                    @enderror
-              </div>
-
-              <!-- Checkbox -->
-              <div class="form-check">
-                <input class="form-check-input me-2" type="checkbox" value="rem" id="rem" name="rem">
-                <div class="form-check-text">
-                    <label class="form-check-label" for="form2Example33">
-                        Remember me
-                      </label>
-                </div>
-              </div>
 
               <!-- Submit button -->
               <div class="loginbtn">
                 <button type="submit" class="btn btn-primary btn-block mb-4">
-                    Login
+                    Send Confirmation Link
                   </button>
               </div>
 
               <div class="forgotandregis">
-                <a href="{{Route('forgotPage')}}" class="forgot">
-                    Forgot Password?
-                </a>
-                <a href="{{Route('registerPage')}}" class="Regis">
-                    Don't have an account?
+                <a href="{{Route('loginPage')}}" class="Regis">
+                    Already have an account?
                 </a>
               </div>
               <!-- Register buttons -->
@@ -83,4 +58,3 @@
   </div>
 </body>
 @endsection
-

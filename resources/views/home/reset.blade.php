@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Login')
+@section('title', 'Reset')
 
 @section('main-content')
 
@@ -18,11 +18,11 @@
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
 
-            <form method="POST" action="{{Route('login')}}" >
+            <form method="POST" action="{{Route('reset')}}" >
               @csrf
-                    <h1 class="logintitle"> Login Now </h1>
+                    <h1 class="logintitle"> Change Password </h1>
                   <!-- 2 column grid layout with text inputs for the first and last names -->
-
+                  <input type="hidden" name="token" value="{{ $token }}">
                   <!-- Email input -->
                   <div class="form-outline mb-4">
                     <input name="email" type="email" id="form3Example3" class="form-control @error('email')
@@ -35,45 +35,36 @@
                       </div>
                     @enderror
                   </div>
-
-                  <!-- Password input -->
                   <div class="form-outline mb-4">
-                    <input name="password" type="password" id="form3Example4" class="form-control  @error('password')
+                    <input name="password" type="password" id="form3Example1" class="form-control  @error('password')
                     is-invalid
-                @enderror" placeholder="Enter password">
-                <label class="form-label" for="form3Example4">Password</label>
+                    @enderror" >
+                    <label class="form-label" for="form3Example1">Password</label>
                     @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                     @enderror
-              </div>
-
-              <!-- Checkbox -->
-              <div class="form-check">
-                <input class="form-check-input me-2" type="checkbox" value="rem" id="rem" name="rem">
-                <div class="form-check-text">
-                    <label class="form-check-label" for="form2Example33">
-                        Remember me
-                      </label>
-                </div>
-              </div>
-
+                  </div>
+                  <div class="form-outline">
+                    <input name="password_confirmation" type="password" id="form3Example2" class="form-control @error('password_confirmation')
+                    is-invalid
+                    @enderror">
+                    <label class="form-label" for="form3Example2">Confirm Password</label>
+                    @error('confirm_password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                  </div>
               <!-- Submit button -->
               <div class="loginbtn">
                 <button type="submit" class="btn btn-primary btn-block mb-4">
-                    Login
+                    Confirm Change
                   </button>
               </div>
 
-              <div class="forgotandregis">
-                <a href="{{Route('forgotPage')}}" class="forgot">
-                    Forgot Password?
-                </a>
-                <a href="{{Route('registerPage')}}" class="Regis">
-                    Don't have an account?
-                </a>
-              </div>
+
               <!-- Register buttons -->
             </form>
           </div>
@@ -83,4 +74,3 @@
   </div>
 </body>
 @endsection
-

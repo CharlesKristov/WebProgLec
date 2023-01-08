@@ -9,6 +9,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\ResetPasswordController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
@@ -55,3 +57,8 @@ Route::post('store_register', [RegisterController::class, 'store'])->name('regis
 // admin route
 Route::get('admin', [DashboardAdminController::class, 'index'])->name('admin');
 
+Route::get('forgot', [ForgotPasswordController::class, 'index'])->name('forgotPage');
+Route::post('forgot', [ForgotPasswordController::class, 'sendlink'])->name('forgot');
+
+Route::get('reset/{token}', [ResetPasswordController::class, 'index'])->name('resetPage');
+Route::post('reset', [ResetPasswordController::class, 'resetpass'])->name('reset');
