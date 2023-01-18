@@ -14,19 +14,18 @@ class ResetPasswordController extends Controller
     }
     public function resetpass(Request $req){
         $req->validate([
-            'email' => 'required|email:dns|exists:leaders',
             'password' => 'required|min:8|confirmed|alpha_num',
             'password_confirmation' => 'required',
         ]);
-        $update = DB::table('password_resets')->where(['email' => $req->email, 'token' => $req->token])->first();
+        $update = DB::table('password_resets')->where(['token' => $req->token])->first();
         if(!$update){
             return back()->with('error', 'Invalid token!');
         }
         else{
-            DB::table('leaders')->where('email', 'LIKE',$req->email)->update([
+            DB::table('leaders')->where('email', 'LIKE',$update->email)->update([
                 'password' => Hash::make($req->password),
             ]);
-            DB::table('password_resets')->where(['email'=> $req->email])->delete();
+            DB::table('password_resets')->where(['email'=> $update->email])->delete();
             return redirect('/login');
         }
     }
