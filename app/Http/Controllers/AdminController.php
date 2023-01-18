@@ -36,4 +36,12 @@ class AdminController extends Controller
         return view('admin-dashboard.manage-team', 
                 ['leader' => $leader]);
     }
+
+    public function verifyPayment($id){
+        $leader =  Leader::findOrFail($id);
+        $leader->Payment_Status = "verified";
+        $leader->save();
+     
+        return back();
+    }
 }   

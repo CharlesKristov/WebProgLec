@@ -5,8 +5,8 @@
 <main id="main">
     <!-- ======= Schedule Section ======= -->
     <section id="schedule" class="section-with-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-header">
+        <div class="container full" data-aos="fade-up">
+          <div class="section-header mt-5">
             <h2>Competition Timeline</h2>
             <p>Here is our competition timeline</p>
           </div>

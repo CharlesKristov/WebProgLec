@@ -5,8 +5,8 @@
 
   <!-- ======= Header ======= -->
  <section id="payment">
-    <div class="container h-100 p-5">
-        <div class="section-header">
+    <div class="container full">
+        <div class="section-header mt-5">
           <h2>Payment Method Instruction</h2>
           {{-- <p>Here is our competition timeline</p> --}}
         </div>

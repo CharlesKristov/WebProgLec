@@ -28,9 +28,6 @@
 ?>  
 @extends('layout.app')
 <body>
-    <div class="top">
-        @extends('include.user-navbar')
-    </div>
     
     <div class="dashboard-bg content-top w-100 text-white d-flex flex-column justify-content-center">
 
@@ -63,7 +60,7 @@
             @endif
         </div>
 
-        <div class="container d-flex align-items-center flex-column text-black text-center">
+        <div class="container full d-flex align-items-center flex-column text-black text-center">
             <div class="card" style = "width: 18rem;background: linear-gradient(to right, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);">
                 <div class="card-body">
                     <h3 class="card-title">Leader</h3>

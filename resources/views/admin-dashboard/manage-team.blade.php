@@ -4,8 +4,8 @@
         @extends('layout.app')
     </div>
     
-    <div class="dashboard-bg content-top text-black d-flex flex-column justify-content-center">
-        <div class="container h-100">
+    <div class="dashboard-bg content-top text-black d-flex flex-column justify-content-center h-100">
+        <div class="container h-100 mt-5 p-5">
             <h1 class = "mt-5 text-white">Manage members</h1>
                 <div class="row row-cols-md-2">
                 @foreach ($leader as $l)
