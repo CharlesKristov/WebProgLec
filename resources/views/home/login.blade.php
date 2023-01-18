@@ -27,7 +27,7 @@
                   <div class="form-outline mb-4">
                     <input name="email" type="email" id="form3Example3" class="form-control @error('email')
                     is-invalid
-                    @enderror" placeholder="Enter email address" required value="{{ old('email') }}">
+                    @enderror" placeholder="Enter email address" required value="{{Cookie::get('CookieEmail') !== null? Cookie::get('CookieEmail') : ""}}">
                     <label class="form-label" for="form3Example3">Email address</label>
                     @error('email')
                       <div class="invalid-feedback">
@@ -40,7 +40,7 @@
                   <div class="form-outline mb-4">
                     <input name="password" type="password" id="form3Example4" class="form-control  @error('password')
                     is-invalid
-                @enderror" placeholder="Enter password">
+                @enderror" placeholder="Enter password" value="{{Cookie::get('CookiePassword') !== null? Cookie::get('CookiePassword') : ""}}">
                 <label class="form-label" for="form3Example4">Password</label>
                     @error('password')
                         <div class="invalid-feedback">

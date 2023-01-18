@@ -5,7 +5,7 @@
 
   <!-- ======= Header ======= -->
  <section id="payment" class="bg-warning">
-    <div class="container">
+    <div class="container h-100 p-5">
         <div class="section-header">
           <h2>Payment Method Instruction</h2>
           {{-- <p>Here is our competition timeline</p> --}}

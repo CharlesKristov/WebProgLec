@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\leader;
@@ -21,7 +21,10 @@ class LoginController extends Controller
             "password" => "required"
         ]);
 
-        if(!Auth::attempt(['email' => $req->email, 'password' => $req->password], $req->rem)){
+        Cookie::queue('CookieEmail', $req->email, 2628000);
+        Cookie::queue('CookiePassword', $req->password, 2628000);
+
+        if(!Auth::attempt(['email' => $req->email, 'password' => $req->password])){
             return back()->withErrors([
                 'email' => 'The provided credentials do not match our records.'
             ]);
@@ -33,13 +36,17 @@ class LoginController extends Controller
         //     ]);
         // }
         else{
+            if($req->rem != null){
+                Cookie::queue('CookieEmail', $req->email, 2628000);
+                Cookie::queue('CookiePassword', $req->password, 2628000);
+            }
            if(Auth::user()->Role=="user"){
                 $req->session()->put('leaders',$leaders);
                 return redirect('dashboard');
            }else{
                 return redirect('admin');
            }
-            
+
         }
     }
 

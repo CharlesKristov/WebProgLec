@@ -50,7 +50,42 @@ class LeaderController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ]);
     }
+    public function updateProfile(Request $req)
+    {
+        $req->validate([
+            'fullname' => 'required|min:5|max:30',
+            'id' => 'required|mimes:png,jpg,jpeg',
+            'password' => 'required|min:8|confirmed|alpha_num',
+            'password_confirmation' => 'required',
+            'dob' => 'required|date|before_or_equal:today',
+            'phone' => 'required|min:11',
+        ]);
 
+        $leader = Auth::user();
+
+        $original_name = $req->file('id');
+        $name = $leader->Team_Name;
+        $ext = $original_name->getClientOriginalExtension();
+        $file_name = 'KTP_image/' . $name . '.' . $ext;
+        //$original_name->storeAs('public/image', $file_name);
+        $original_name->move('storage/app/KTP_image', $file_name);
+
+        $fullname = $req->get('fullname');
+        $image = $req->get('id');
+        $password = $req->get('password');
+        $dob = $req->get('dob');
+        $phone = $req->get('phone');
+
+        DB::table('leaders')->where('Team_Name', 'LIKE', $leader->Team_Name)->update([
+            'full_name' => $fullname,
+            'role' => 'user',
+            'id_card' => $file_name,
+            'password' => Hash::make($password),
+            'dob' => $dob,
+            'phone' => $phone
+        ]);
+        return redirect('dashboard');
+    }
     public function store(Request $request)
     {
         $request->validate([
@@ -132,10 +167,7 @@ class LeaderController extends Controller
      * @param  \App\Models\leader  $leader
      * @return \Illuminate\Http\Response
      */
-    public function edit(leader $leader)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.

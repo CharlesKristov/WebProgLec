@@ -722,6 +722,11 @@ h6 {
   padding: 60px 0 30px 0;
 }
 
+#speakers img {
+    width: 593px;
+    height: 359px;
+}
+
 #speakers .speaker {
   position: relative;
   overflow: hidden;

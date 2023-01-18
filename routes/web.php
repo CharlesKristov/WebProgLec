@@ -8,6 +8,7 @@ use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ResetPasswordController;
@@ -62,3 +63,6 @@ Route::post('forgot', [ForgotPasswordController::class, 'sendlink'])->name('forg
 
 Route::get('reset/{token}', [ResetPasswordController::class, 'index'])->name('resetPage');
 Route::post('reset', [ResetPasswordController::class, 'resetpass'])->name('reset');
+
+Route::get('/updateLeader', [DashboardController::class, 'viewUpdateLeader'])->name('updateLeader');
+Route::post('/updateLeader', [LeaderController::class, 'updateProfile'])->name('update');

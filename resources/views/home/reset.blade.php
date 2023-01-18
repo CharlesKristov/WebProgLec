@@ -24,17 +24,17 @@
                   <!-- 2 column grid layout with text inputs for the first and last names -->
                   <input type="hidden" name="token" value="{{ $token }}">
                   <!-- Email input -->
-                  <div class="form-outline mb-4">
+                  {{-- <div class="form-outline mb-4">
                     <input name="email" type="email" id="form3Example3" class="form-control @error('email')
                     is-invalid
-                    @enderror" placeholder="Enter email address" required value="{{ old('email') }}">
+                    @enderror" placeholder="Enter email address" required value="{{ Auth::user()->email }}" readonly>
                     <label class="form-label" for="form3Example3">Email address</label>
                     @error('email')
                       <div class="invalid-feedback">
                           {{ $message }}
                       </div>
                     @enderror
-                  </div>
+                  </div> --}}
                   <div class="form-outline mb-4">
                     <input name="password" type="password" id="form3Example1" class="form-control  @error('password')
                     is-invalid
