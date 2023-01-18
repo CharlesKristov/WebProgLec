@@ -14,21 +14,15 @@ class DashboardAdminController extends Controller
 {
     public function index(){
   
-        $leader = leader::get();
+        $leader = leader::get()->toQuery()->paginate(1);
         return view('admin-dashboard.verify-payment', ['leader' => $leader]);
 
     }
 
     public function manage(){
-        $leader = leader::get();
+        $leader = leader::get()->toQuery()->paginate(1);
         return view('admin-dashboard.manage-team', ['leader' => $leader]);
     }
 
-    public function verifyPayment($id){
-        $leader =  Leader::findOrFail($id);
-        $leader->Payment_Status = "verified";
-        $leader->save();
-     
-        return back();
-    }
+   
 }
