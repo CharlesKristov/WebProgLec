@@ -16,4 +16,13 @@
       </nav><!-- .navbar -->
       <a class="buy-tickets scrollto text-white" href="{{Route('logout')}}">Logout</a>
     </div>
+    <div class="dropdown">
+        <div class="nav-link scrollto text-white dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Profile
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="{{Route('updateLeader')}}">Update Profile</a></li>
+          <li><a class="dropdown-item" href="{{Route('logout')}}">Logout</a></li>
+        </ul>
+      </div>
   </header><!-- End Header -->
