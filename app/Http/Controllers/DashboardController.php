@@ -41,7 +41,7 @@ class DashboardController extends Controller
     }
 
     public function viewPayment(){
-        return view('user-dashboard.paym    ent');
+        return view('user-dashboard.payment');
     }
 
     public function viewTimeline(){
