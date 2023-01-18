@@ -46,7 +46,7 @@
         <div class="row justify-content-md-center">
           <div class="col-lg-6 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+              <img src="assets/img/competition/CP.jpg" alt="Speaker 1" class="img-fluid">
               <div class="details">
                 <h3><a href="{{Route('cp')}}">Competitive Programming</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tenetur ut reiciendis, nisi nulla asperiores, nihil, maiores aliquid illo praesentium fuga suscipit possimus animi explicabo provident quaerat voluptatum expedita dolores.</p>
@@ -56,7 +56,7 @@
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
+              <img src="assets/img/competition/Hackathon.jpg" alt="Speaker 2" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Hackathon</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptate incidunt id quia mollitia neque omnis dolores, veniam hic consequatur, nulla explicabo, maiores eaque esse repellat rerum sed. Corporis, incidunt!</p>
@@ -67,7 +67,7 @@
 
           <div class="col-lg-6 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <img src="assets/img/competition/CTF.jpg" alt="Speaker 4" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Capture The Flag</a></h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia quod quibusdam iure modi culpa cupiditate est nemo laboriosam sit, unde quos. Est officia expedita laborum nam delectus debitis voluptatum et!</p>
@@ -78,7 +78,7 @@
 
           <div class="col-lg-6 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
+              <img src="assets/img/competition/GameIdeation.jpg" alt="Speaker 6" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Game Ideation</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex alias natus minima autem distinctio ut consequatur cupiditate earum unde. Voluptatibus similique ad expedita enim tempore reprehenderit! Corporis dolor asperiores placeat.</p>
@@ -397,55 +397,55 @@
             <ul class="faq-list">
 
               <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Apakah boleh membawa mainan atau boneka ke dalam ruang lomba? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    Untuk 1 tim, peserta hanya diperbolehkan membawa 1 boneka ke dalam ruang lomba.
                   </p>
                 </div>
               </li>
 
               <li>
-                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Apa benefit yang akan aku dapatkan dengan mengikuti lomba Technostalgia? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq2" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Setiap peserta akan mendapat E - sertifikat dan hadiah uang untuk juara 1, 2 dan 3. Selain itu, peserta juga akan mendapat beberapa merchandise gratis.
                   </p>
                 </div>
               </li>
 
               <li>
-                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Apakah aku bisa membawa makanan dan minuman dari luar? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq3" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    Sayangnya, kamu tidak diperbolehkan untuk membawa makanan dan minuman dari luar. Namun, kami telah menyediakan makanan dan minuman untuk semua peserta. Selain itu, juga tersedia bazaar - bazaar yang bisa dipilih.
                   </p>
                 </div>
               </li>
 
               <li>
-                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Bagaimana tahap pendaftaran lomba technostalgia? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq4" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Pertama, ketua kelompok akan melakukan pembuatan akun dan pendaftaran tim pada website kami. Kemudian, membayar biaya pendaftaran dan mengirimkan bukti pembayaran. Setelah bukti pembayaran diverifikasi oleh panitia, maka tim telah dianggap valid untuk mengikuti lomba.
                   </p>
                 </div>
               </li>
 
               <li>
-                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Bagaimana cara mengupdate data tim? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq5" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                    data tim dapat diupdate pada halaman update, tetapi email dan nama tim tidak dapat diupdate, sehingga sebisa mungkin tidak terdapat kesalahan pada saat registrasi.
                   </p>
                 </div>
               </li>
 
               <li>
-                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Apakah boleh seseorang terdaftar pada 2 lomba berbeda? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq6" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                    1 orang dapat menjadi anggota dari 2 tim berbeda dengan jadwal lomba yang tidak bertabrakan, tetapi hanya dapat menjadi ketua di 1 lomba.
                   </p>
                 </div>
               </li>
