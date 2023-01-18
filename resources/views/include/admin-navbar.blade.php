@@ -21,7 +21,7 @@
           Profile
         </div>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="{{Route('updateLeader')}}">Update Profile</a></li>
+          <li><a class="dropdown-item" href="{{Route('updateLeader')}}">Update</a></li>
         </ul>
       </div>
   </header><!-- End Header -->
