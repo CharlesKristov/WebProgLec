@@ -17,10 +17,13 @@ class DashboardAdminController extends Controller
   
         $leader = leader::get();
     
+        // dd($leader->first()->Payment_Photo);
 
 
-        return view('admin-dashboard.dashboard', 
-            ['leader' => $leader]);
+
+        return view('admin-dashboard.dashboard', ['leader' => $leader]);
+
+        
         
     }
 }
