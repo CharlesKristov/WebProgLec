@@ -70,8 +70,12 @@
                                               
                                               <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                                              
-                                                <button type="submit" class="btn btn-primary" onclick="location.href='{{ route('verify', $l->id) }}'">Verify</button>
+                                                <form action = "{{ route('verify', $l->id) }}" method ="POST">
+                                                    @csrf 
+                                                    @method('patch')
+                                                    <button type="submit" class="btn btn-primary">Verify</button>
+                                                </form>
+                                                
                                                 
                                                 
                                               </div>

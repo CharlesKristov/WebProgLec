@@ -58,7 +58,7 @@ Route::post('store_register', [RegisterController::class, 'store'])->name('regis
 // admin route
 Route::get('admin', [DashboardAdminController::class, 'index'])->name('verify-payment');
 Route::get('admin/manage', [DashboardAdminController::class, 'manage'])->name('manage-team');
-Route::get('admin/{id}', [DashboardAdminController::class, 'verifyPayment'])->name('verify');
+Route::patch('admin/{id}', [DashboardAdminController::class, 'verifyPayment'])->name('verify');
 Route::get('admin/update/{id}', [AdminController::class, 'update'])->name('view-update');
 Route::get('admin/destroy/{id}', [AdminController::class, 'destroy'])->name('destroy-member');
 Route::patch('admin/updatemember/{id}', [AdminController::class, 'editMember'])->name('update-member');
