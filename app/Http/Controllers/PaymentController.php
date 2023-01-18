@@ -16,12 +16,14 @@ class PaymentController extends Controller
     }
     public function uploadreceipt(Request $request) {
         $request->validate([
-            'receipt'=>'required'
+            'receipt'=>'required|mimes:png,jpg,jpeg'
         ]);
 
         $receipt = $request->file('receipt');
         $receiptName = $receipt->getClientOriginalName();
-        Storage::putFileAs('public/Receipt', $receipt, $receiptName);
+
+        $receipt->move('storage/app/Receipts', $receiptName);
+        // $original_name->move('storage/app/KTP_image', $file_name);
 
         // CRUD
         $value = $request->session()->get('leaders');
