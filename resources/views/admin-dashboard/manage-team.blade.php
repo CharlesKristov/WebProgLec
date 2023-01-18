@@ -48,11 +48,9 @@
                                     </div>
                                     
                                     <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                         @csrf 
-                                        <button type="submit" class="btn">
-                                            <a href ="{{ route('destroy-member', ['id' => $l->id] ) }}" class = "btn btn-danger me-2">Delete</a>
-                                        </button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                                        <a href ="{{ route('destroy-member', ['id' => $l->id] ) }}" class ="btn btn-danger me-2">Delete</a>
                                     </div>
                                 </div>
                                 </div>
