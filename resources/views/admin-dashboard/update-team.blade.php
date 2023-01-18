@@ -4,8 +4,8 @@
         @extends('layout.app')
     </div>
     
-    <div class="dashboard-bg content-top text-black d-flex flex-column justify-content-center">
-        <div class="container mt-5">
+    <div class="dashboard-bg content-top text-black d-flex flex-column justify-content-center h-100 pb-5">
+        <div class="container mt-5 h-100 p-5">
         <h2 class = "mt-5 text-white">Update data</h2>
         <h4 class = "mt-5 text-white">Team data</h4>
         <form class>

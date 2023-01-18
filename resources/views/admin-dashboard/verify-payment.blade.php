@@ -10,7 +10,7 @@
             <div class="row row-cols-md-2">
                 @foreach ($leader as $l)
                 @if($l->Role=="user")
-                <form action="" method="post">
+                <form action="{{ Route('verify',  $l->id) }}" method="GET">
 
                     <div class="col-md-4 mt-4">   
                         <div class="card text-center h-80" style = "width: 20rem">
@@ -70,14 +70,8 @@
                                               
                                               <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                                                <form action = "{{ route('verify', $l->id) }}" method ="POST">
                                                     @csrf 
-                                                    @method('patch')
                                                     <button type="submit" class="btn btn-primary">Verify</button>
-                                                </form>
-                                                
-                                                
-                                                
                                               </div>
                                             </div>
                                           </div>
