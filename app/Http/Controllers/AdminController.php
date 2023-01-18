@@ -33,8 +33,7 @@ class AdminController extends Controller
     public function destroy($id){
         DB::table('leaders')->where('id', 'like', $id)->delete();
         $leader = leader::get();
-        return view('admin-dashboard.manage-team', 
-                ['leader' => $leader]);
+        return back();
     }
 
     public function verifyPayment($id){
