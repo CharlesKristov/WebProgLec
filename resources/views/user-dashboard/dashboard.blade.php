@@ -1,31 +1,4 @@
-<?php 
 
-    
-
-    // $data = session()->all(); 
-
-    // if (session()->has('leaders')) {
-    // $leaderSession = Session::get('leaders');
-    // //
-    // // dd($leaderSession->Team_Name);
-    // $leader = DB::table('leaders')
-    //             ->where('id', '=', $leaderSession->id)
-    //             ->get()->first();
-
-    //             // dd($leader);
-    // // echo $leader->Team_Name;
-    // $members = DB::table('leaders')
-    //         ->join('members', 'leaders.id', '=', 'members.Leader_id')
-    //         ->where('leaders.id', '=', $leader->id)
-    //         ->get();
-    // }
-    // else {
-    //     // return redirect()->route('home');
-    //     return redirect()->to('/')->send();
-
-    // }
-
-?>  
 @extends('layout.app')
 <body>
     
@@ -54,9 +27,9 @@
             @if ($leader->Payment_Status == null)
                 <h4 class="">Payment Status: Haven't done payment!</h4>
                 @elseif ($leader->Payment_Status == "unverified")
-                <h4 class="">Payment Status: <span class="text-danger"> Unverifed Payment!</span></h4>
+                <h4 class="">Payment Status: <span class="text-danger"> Unverified</span></h4>
                 @elseif($leader->Payment_Status == "verified")
-                <h4 class="">Payment Status: <span class="text-success"> Verifed Payment!</span></h4>
+                <h4 class="">Payment Status: <span class="text-success"> Verified</span></h4>
             @endif
         </div>
 
