@@ -19,9 +19,8 @@ class DashboardAdminController extends Controller
     
 
 
-        return view('dashboardadmin', 
-            ['leader' => $leader
-            ]);
+        return view('admin-dashboard.dashboard', 
+            ['leader' => $leader]);
         
     }
 }

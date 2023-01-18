@@ -1,7 +1,7 @@
 
 <body>
     <div class="top">
-        @extends('usernavbar')
+        @extends('layout.app')
     </div>
     
     <div class="dashboard-bg content-top text-black d-flex flex-column justify-content-center">
@@ -20,9 +20,9 @@
                                         <li class="h5 list-group-item">{{$m->Full_Name}} </li>
                                     @endforeach
                                 </ul>   
-                                <div class="card-footer d-flex  justify-content-between" style="background:#FFFFFF">
-                                    <a href ="#" class = "btn btn-primary ">View</a>
-                                    <a href ="#" class = "btn btn-success">Verify</a>
+                                <div class="card-footer d-flex  justify-content-between p-2" style="background:#FFFFFF">
+                                    <a href ="#" class = "btn btn-primary me-2">View</a>
+                                    <a href ="#" class = "btn btn-success me-2">Verify</a>
                                 </div>
                             </div>
                         </div>  

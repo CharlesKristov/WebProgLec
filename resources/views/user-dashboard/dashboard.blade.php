@@ -116,7 +116,7 @@
 
             </div>
 
-            <div class="container mb-5">
+            <div class="container mb-5 text-white">
                 
                 <form action="/member_store" method="post">
                     @csrf
