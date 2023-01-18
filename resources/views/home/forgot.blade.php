@@ -24,17 +24,28 @@
                   <!-- 2 column grid layout with text inputs for the first and last names -->
 
                   <!-- Email input -->
-                  <div class="form-outline mb-4">
+                  <div class="form-outline mb-4"><label class="form-label" for="form3Example3">Email address</label>
                     <input name="email" type="email" id="form3Example3" class="form-control @error('email')
                     is-invalid
                     @enderror" placeholder="Enter email address" required value="{{ old('email') }}">
-                    <label class="form-label" for="form3Example3">Email address</label>
+
                     @error('email')
                       <div class="invalid-feedback">
                           {{ $message }}
                       </div>
                     @enderror
                   </div>
+
+                  {{-- @if ($message!=null)
+                      <div class="alert alert-success"></div>
+                  @else
+
+                  @endif --}}
+                  @if ( Session::get('message'))
+                      {{-- <h1> {{ Session::get('message') }} </h1> --}}
+                      <div class="alert alert-success">{{ Session::get('message') }}</div>
+                  @endif
+
 
 
               <!-- Submit button -->
