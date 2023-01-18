@@ -17,7 +17,7 @@ class DashboardController extends Controller
         $leader = DB::table('leaders')
                     ->where('id', '=', $leaderSession->id)
                     ->get()->first();
-    
+
                     // dd($leader);
         // echo $leader->Team_Name;
         $members = DB::table('leaders')
@@ -26,7 +26,7 @@ class DashboardController extends Controller
                 ->get();
 
 
-            return view('user-dashboard.dashboard', 
+            return view('user-dashboard.dashboard',
             ['leader' => $leader,
              'members' => $members
             ]
@@ -36,7 +36,7 @@ class DashboardController extends Controller
             dd("aaa");
             // return redirect()->route('home');
             return redirect()->to('/')->send();
-    
+
         }
     }
 
@@ -46,5 +46,9 @@ class DashboardController extends Controller
 
     public function viewTimeline(){
         return view('user-dashboard.timeline');
+    }
+
+    public function viewUpdateLeader(){
+        return view('home.update');
     }
 }

@@ -5,20 +5,16 @@
   @section('main-content')
   <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
     <div class="row gx-lg-5 align-items-center mb-5">
-      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-        <div class="logoimage">
-            <img src="{{asset('images/Logo.png')}}" alt="" class="Logo">
-        </div>
-      </div>
+
       <div class="col-lg-6 mb-5 mb-lg-5 position-relative" id="circleandform">
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
 
-            <form method="POST" action="{{Route('register')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{Route('update')}}" enctype="multipart/form-data">
                 @csrf
-                <h1 class="logintitle"> Register </h1>
+                <h1 class="logintitle"> Update Leader </h1>
               <!-- 2 column grid layout with text inputs for the first and last names -->
 
               <div class="row">
@@ -36,47 +32,20 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input name="Team_Name" type="text" id="form3Example2" class="form-control @error('Team_Name')
-                    is-invalid
-                    @enderror" required value="{{ old('Team_Name') }}">
-                    <label class="form-label" for="form3Example2">Team Name</label>
-                    @error('Team_Name')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input name="id" type="file" id="form3Example1" class="form-control @error('id')
-                    is-invalid
-                    @enderror" required value="{{ old('id') }}">
-                    <label class="form-label" for="form3Example1">ID Card</label>
-                    @error('id')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input name="email" type="email" id="form3Example2" class="form-control @error('email')
+                    <div class="form-outline">
+                        <input name="id" type="file" id="form3Example1" class="form-control @error('id')
                         is-invalid
-                    @enderror" required value="{{ old('email') }}">
-                    <label class="form-label" for="form3Example2">Email Address</label>
-                    @error('email')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                  </div>
+                        @enderror" required value="{{ old('id') }}">
+                        <label class="form-label" for="form3Example1">ID Card</label>
+                        @error('id')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                      </div>
                 </div>
               </div>
+
 
               <div class="row">
                 <div class="col-md-6 mb-4">
@@ -139,7 +108,7 @@
               <!-- Submit button -->
               <div class="loginbtn">
                 <button type="submit" class="btn btn-primary btn-block mb-4">
-                    Register
+                    Update
                   </button>
               </div>
 
@@ -153,4 +122,3 @@
   </div>
   @endsection
 </body>
-
