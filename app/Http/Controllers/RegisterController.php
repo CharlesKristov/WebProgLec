@@ -66,6 +66,6 @@ class RegisterController extends Controller
             // $save->size = $size;
 
             // $save->save();
-            return redirect('login');
+            return redirect('login')->with('alert','Register Successful');
     }
 }

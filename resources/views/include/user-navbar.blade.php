@@ -15,16 +15,25 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <div class="dropdown mb-2 ms-2">
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Profile
+      {{-- <div class="dropdown show mb-2 ms-2">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Profile
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="text-white" href="{{Route('updateLeader')}}">Update Profile</a>
-            <a class="text-white" href="{{Route('logout')}}">Logout</a>
+            <a class="dropdown-item" href="{{Route('updateLeader')}}">Update Profile</a>
+            <a class="dropdown-item" href="{{Route('logout')}}">Logout</a>
+        </div>
+      </div> --}}
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Small button
+        </button>
+        <div class="dropdown-menu">
+
         </div>
       </div>
 
-
-    </div>
+    </div><a class="" href="{{Route('updateLeader')}}">Update Profile</a>
+            <a class="" href="{{Route('logout')}}">Logout</a>
   </header><!-- End Header -->

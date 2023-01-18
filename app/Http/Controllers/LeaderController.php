@@ -84,7 +84,7 @@ class LeaderController extends Controller
             'dob' => $dob,
             'phone' => $phone
         ]);
-        return redirect('dashboard');
+        return redirect('dashboard')->with('alert','Update Successful');
     }
     public function store(Request $request)
     {
