@@ -32,6 +32,6 @@ class PaymentController extends Controller
               ->where('Team_Name' ,$team_name)
               ->update(['Payment_Photo' => $receiptName, 'Payment_Status' => 'unverified']);
 
-        return redirect()->to('dashboard')->send();
+        return redirect()->to('dashboard')->send()->with('alert','Payment Receipt Successfuly Uploaded');;
     }
 }
