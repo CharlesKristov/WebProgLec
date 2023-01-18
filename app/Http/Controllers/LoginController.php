@@ -44,7 +44,7 @@ class LoginController extends Controller
                 $req->session()->put('leaders',$leaders);
                 return redirect('dashboard');
            }else{
-                return redirect('admin');
+                return redirect('admin/manage');
            }
 
         }

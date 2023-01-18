@@ -56,7 +56,7 @@ Route::get('register', [RegisterController::class, 'index'])->name('registerPage
 Route::post('store_register', [RegisterController::class, 'store'])->name('register');
 
 // admin route
-Route::get('admin', [DashboardAdminController::class, 'index'])->name('verify-payment');
+Route::get('admin/verify', [DashboardAdminController::class, 'verify'])->name('verify-payment');
 Route::get('admin/manage', [DashboardAdminController::class, 'manage'])->name('manage-team');
 Route::get('admin/verify/{id}', [AdminController::class, 'verifyPayment'])->name('verify');
 Route::get('admin/update/{id}', [AdminController::class, 'update'])->name('view-update');
