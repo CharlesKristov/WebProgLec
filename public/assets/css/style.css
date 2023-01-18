@@ -829,6 +829,8 @@ h6 {
 --------------------------------------------------------------*/
 #schedule {
   padding: 60px 0 60px 0;
+  background: rgba(6, 12, 34, 1);
+  color: white;
 }
 
 #schedule .nav-tabs {
@@ -902,6 +904,7 @@ h6 {
 
 #schedule .schedule-item:hover {
   background-color: #fff;
+  color: black;
 }
 
 #schedule .schedule-item time {
@@ -1525,6 +1528,8 @@ h6 {
 
 #payment {
     padding: 60px 0 60px 0;
+    background: rgba(6, 12, 34);
+    color: white;
   }
 
 .steps {
@@ -1538,6 +1543,7 @@ h6 {
 
 .steps p {
     justify-content: center;
+    color: white;
     margin:auto;
     padding-right: 10px;
     width: 300px;

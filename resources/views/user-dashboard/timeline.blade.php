@@ -4,7 +4,7 @@
 @section('main-content')
 <main id="main">
     <!-- ======= Schedule Section ======= -->
-    <section id="schedule" class="section-with-bg bg-warning">
+    <section id="schedule" class="section-with-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-header">
             <h2>Competition Timeline</h2>

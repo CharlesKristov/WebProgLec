@@ -4,7 +4,7 @@
 @section('main-content')
 
   <!-- ======= Header ======= -->
- <section id="payment" class="bg-warning">
+ <section id="payment">
     <div class="container h-100 p-5">
         <div class="section-header">
           <h2>Payment Method Instruction</h2>
