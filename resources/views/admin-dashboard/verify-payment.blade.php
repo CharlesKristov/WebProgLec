@@ -9,7 +9,8 @@
             <h1 class = "mt-5 text-white">Teams registered: </h1>
             <div class="row row-cols-md-2">
                 @foreach ($leader as $l)
-                <form action="" method="post">
+                @if($l->Role=="user")
+                <form action="{{ Route('verify',  $l->id) }}" method="GET">
 
                     <div class="col-md-4 mt-4">   
                         <div class="card text-center h-80" style = "width: 20rem">
@@ -26,9 +27,15 @@
                                     <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#{{ $l->Team_Name }}">
                                         View
                                     </button>
+                                    @if($l->Payment_Status =="verified")
+                                    <button disabled type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#{{ $l->Team_Name }}StatiVerify">
+                                        Verified
+                                    </button>
+                                    @else
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#{{ $l->Team_Name }}StatiVerify">
                                         Verify
                                     </button>
+                                    @endif
                                     <div class="modalTest text-whte">
                                         <!--View Modal -->
                                         <div class="modal fade" id="{{ $l->Team_Name }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -57,13 +64,14 @@
                                           <div class="modal-dialog">
                                             <div class="modal-content">
                                               <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">Verify Payment</h5>
+                                                <h5 class="modal-title" id="staticBackdropLabel">Are You Sure Want To Verify This Payment?</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                               </div>
                                               
                                               <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                                                <button type="button" class="btn btn-primary">Verify</button>
+                                                    @csrf 
+                                                    <button type="submit" class="btn btn-primary">Verify</button>
                                               </div>
                                             </div>
                                           </div>
@@ -74,6 +82,7 @@
                         </div>  
                     </div>
                 </form>
+                @endif
                 @endforeach
             </div>
         </div>

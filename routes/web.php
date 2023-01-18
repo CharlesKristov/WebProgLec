@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -16,8 +17,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\leader;
-
-
+use Whoops\Run;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,8 +56,12 @@ Route::get('register', [RegisterController::class, 'index'])->name('registerPage
 Route::post('store_register', [RegisterController::class, 'store'])->name('register');
 
 // admin route
-Route::get('admin', [DashboardAdminController::class, 'index'])->name('admin');
-
+Route::get('admin', [DashboardAdminController::class, 'index'])->name('verify-payment');
+Route::get('admin/manage', [DashboardAdminController::class, 'manage'])->name('manage-team');
+Route::get('admin/{id}', [DashboardAdminController::class, 'verifyPayment'])->name('verify');
+Route::get('admin/update/{id}', [AdminController::class, 'update'])->name('view-update');
+Route::get('admin/destroy/{id}', [AdminController::class, 'destroy'])->name('destroy-member');
+Route::patch('admin/updatemember/{id}', [AdminController::class, 'editMember'])->name('update-member');
 Route::get('forgot', [ForgotPasswordController::class, 'index'])->name('forgotPage');
 Route::post('forgot', [ForgotPasswordController::class, 'sendlink'])->name('forgot');
 
@@ -66,3 +70,5 @@ Route::post('reset', [ResetPasswordController::class, 'resetpass'])->name('reset
 
 Route::get('/updateLeader', [DashboardController::class, 'viewUpdateLeader'])->name('updateLeader');
 Route::post('/updateLeader', [LeaderController::class, 'updateProfile'])->name('update');
+
+

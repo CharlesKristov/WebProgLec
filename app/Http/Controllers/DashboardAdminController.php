@@ -12,18 +12,23 @@ use App\Models\member;
 
 class DashboardAdminController extends Controller
 {
-    //
     public function index(){
   
         $leader = leader::get();
-    
-        // dd($leader->first()->Payment_Photo);
+        return view('admin-dashboard.verify-payment', ['leader' => $leader]);
 
+    }
 
+    public function manage(){
+        $leader = leader::get();
+        return view('admin-dashboard.manage-team', ['leader' => $leader]);
+    }
 
-        return view('admin-dashboard.dashboard', ['leader' => $leader]);
-
-        
-        
+    public function verifyPayment($id){
+        $leader =  Leader::findOrFail($id);
+        $leader->Payment_Status = "verified";
+        $leader->save();
+     
+        return back();
     }
 }

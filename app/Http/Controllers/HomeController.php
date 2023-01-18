@@ -12,7 +12,7 @@ class HomeController extends Controller
     }
 
     public function viewAboutUs(){
-        return view('home.aboutus');
+        return view('home.about-us');
     }
 
     public function viewCp(){
