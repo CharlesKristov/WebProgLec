@@ -16,8 +16,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\leader;
-
-
+use Whoops\Run;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,8 +55,8 @@ Route::get('register', [RegisterController::class, 'index'])->name('registerPage
 Route::post('store_register', [RegisterController::class, 'store'])->name('register');
 
 // admin route
-Route::get('admin', [DashboardAdminController::class, 'index'])->name('admin');
-
+Route::get('admin', [DashboardAdminController::class, 'index'])->name('verify-payment');
+Route::get('admin/{id}', [DashboardAdminController::class, 'verifyPayment'])->name('verify');
 Route::get('forgot', [ForgotPasswordController::class, 'index'])->name('forgotPage');
 Route::post('forgot', [ForgotPasswordController::class, 'sendlink'])->name('forgot');
 
@@ -66,3 +65,5 @@ Route::post('reset', [ResetPasswordController::class, 'resetpass'])->name('reset
 
 Route::get('/updateLeader', [DashboardController::class, 'viewUpdateLeader'])->name('updateLeader');
 Route::post('/updateLeader', [LeaderController::class, 'updateProfile'])->name('update');
+
+
