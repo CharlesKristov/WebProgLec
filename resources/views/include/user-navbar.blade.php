@@ -9,34 +9,17 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto text-white" href="{{Route('dashboard')}}">User Dashboard</a></li>
-          <li><a class="nav-link scrollto text-white" href="{{Route('payment')}}">Payment</a></li>
-          <li><a class="nav-link scrollto text-white" href="{{Route('timeline')}}">Timeline</a></li>
+          <li><a class="nav-link scrollto" href="{{Route('dashboard')}}">Dashboard</a></li>
+          <li><a class="nav-link scrollto" href="{{Route('payment')}}">Payment</a></li>
+          <li><a class="nav-link scrollto" href="{{Route('timeline')}}">Timeline</a></li>
+          <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{Route('updateLeader')}}">Update Profile</a></li>
+              <li><a href="{{Route('logout')}}">Logout</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <div class="dropdown">
-        <div class="nav-link scrollto text-white dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Profile
-        </div>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="{{Route('updateLeader')}}">Update Profile</a></li>
-          <li><a class="dropdown-item" href="{{Route('logout')}}">Logout</a></li>
-        </ul>
-      </div>
-
-      {{-- <div class="dropdown show mb-2 ms-2">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Profile
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="{{Route('updateLeader')}}">Update Profile</a>
-            <a class="dropdown-item" href="{{Route('logout')}}">Logout</a>
-        </div>
-      </div> --}}
-
-    
-
-
     </div>
   </header><!-- End Header -->
