@@ -9,7 +9,7 @@
             <h1 class = "mt-5 text-white">Teams registered: </h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 
-                @foreach(range(1,10) as $i)
+                <!-- @foreach(range(1,10) as $i) -->
                 @foreach ($leader as $l)
                 @if($l->Role=="user")
                 <div class="col"> 
@@ -93,7 +93,7 @@
                                 </div>
 
                             </div>
-                            
+
                         </div>
                     </form>
                 </div>
