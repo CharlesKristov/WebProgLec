@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->unsignedBigInteger('Leader_id');
-            $table->foreign('Leader_id')->references('id')->on('leaders');
+            $table->foreign('Leader_id')->references('id')->on('leaders')->onUpdate('cascade')->onDelete('cascade');
             $table->string('Full_Name');
             $table->string('Email');
             $table->date('DOB');
