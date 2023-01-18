@@ -12,15 +12,15 @@ use App\Models\member;
 
 class DashboardAdminController extends Controller
 {
-    public function index(){
+    public function verify(){
   
-        $leader = leader::get()->toQuery()->paginate(1);
+        $leader = leader::where('Role' , 'LIKE', 'user')->paginate(3);
         return view('admin-dashboard.verify-payment', ['leader' => $leader]);
 
     }
 
     public function manage(){
-        $leader = leader::get()->toQuery()->paginate(1);
+        $leader = leader::where('Role' , 'LIKE', 'user')->paginate(3);
         return view('admin-dashboard.manage-team', ['leader' => $leader]);
     }
 

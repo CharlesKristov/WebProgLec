@@ -9,9 +9,9 @@
             <h1 class = "mt-5 text-white">Teams registered: </h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 
-                <!-- @foreach(range(1,10) as $i) -->
+            
                 @foreach ($leader as $l)
-                @if($l->Role=="user")
+             
                 <div class="col"> 
                     <form action="{{ Route('verify',  $l->id) }}" method="GET">
 
@@ -26,11 +26,11 @@
                                         <li class="h5 list-group-item">{{$m->Full_Name}} </li>
                                     @endforeach
                                     @if($l->members->count() == 0)
-                                        <li class="h5 list-group-item">-</li>
-                                        <li class="h5 list-group-item">- </li>
+                                    <li class="h5 list-group-item">(no member 1)</li>
+                                    <li class="h5 list-group-item">(no member 2)</li>
                                     @endif
                                     @if($l->members->count() == 1)
-                                        <li class="h5 list-group-item">-</li>
+                                        <li class="h5 list-group-item">(no member 2)</li>
                                     @endif
                                 </ul>   
                                 <div class="card-footer d-flex  justify-content-between" style="background:#FFFFFF">
@@ -97,10 +97,18 @@
                         </div>
                     </form>
                 </div>
-                @endif
-                @endforeach
+             
                 @endforeach
             </div>
+            <div class="pagination-container d-flex justify-content-between mt-4">
+                <div class="d-flex align-items-center">
+                    <p class="text-white mb-0">
+                        Showing <b class="">{{$leader->firstItem()}}</b> to <b class="">{{$leader->lastItem()}}</b> of <b class="">{{$leader->total()}}</b> results
+                    </p>
+                </div>
+                <div class="d-flex">
+                    {{$leader->links()}}
+                </div>
         </div>
         <br><br><br>
     </div>
