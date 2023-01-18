@@ -15,12 +15,16 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
-        <ul>
-            <li><a class="text-white" href="{{Route('updateLeader')}}">Update Profile</a></li>
-            <li><a class="text-white" href="{{Route('logout')}}">Logout</a></li>
-        </ul>
-      </li>
+      <div class="dropdown mb-2 ms-2">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="text-white" href="{{Route('updateLeader')}}">Update Profile</a>
+            <a class="text-white" href="{{Route('logout')}}">Logout</a>
+        </div>
+      </div>
+
 
     </div>
   </header><!-- End Header -->
