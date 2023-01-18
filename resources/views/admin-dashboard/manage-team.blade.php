@@ -7,9 +7,11 @@
     <div class="dashboard-bg content-top text-black d-flex flex-column justify-content-center h-100">
         <div class="container h-100 mt-5 p-5">
             <h1 class = "mt-5 text-white">Manage members</h1>
-                <div class="row row-cols-md-2">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <!-- @foreach(range(1,10) as $i) -->
                 @foreach ($leader as $l)
-                    <div class="col-md-4 mt-4">   
+                    @if($l->Role == "user" )
+                    <div class="col mt-3">   
                         <div class="card text-center h-80" style = "width: 20rem">
                             <div class="card-body">
                                 <h3 class="card-title">{{ $l->Team_Name }}</h3>
@@ -25,7 +27,7 @@
                                     @endif
                                     @if($l->members->count() == 1)
                                         <li class="h5 list-group-item">-</li>
-                                        @endif
+                                    @endif
                                 </ul>   
                                 <div class="card-footer d-flex  justify-content-between p-2" style="background:#FFFFFF">
                                     <a href ="{{ route('view-update', ['id' => $l->id]) }}" class = "btn btn-primary me-2">Update</a>
@@ -34,31 +36,37 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>  
-                    </div>
+                         
 
-                    <!--Verify Modal -->
-                    <div class="modal fade" id="{{ $l->Team_Name }}StatiVerify" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="staticBackdropLabel">Are You Sure Want To Delete This Team?</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <!--Verify Modal -->
+                            <div class="modal fade" id="{{ $l->Team_Name }}StatiVerify" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Are You Sure Want To Delete This Team?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                                        @csrf 
+                                        <button type="submit" class="btn">
+                                            <a href ="{{ route('destroy-member', ['id' => $l->id] ) }}" class = "btn btn-danger me-2">Delete</a>
+                                        </button>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                            
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
-                                  @csrf 
-                                  <button type="submit" class="btn">
-                                    <a href ="{{ route('destroy-member', ['id' => $l->id] ) }}" class = "btn btn-danger me-2">Delete</a>
-                                  </button>
-                            </div>
-                          </div>
                         </div>
-                      </div>
 
+                     
+                    </div>
+                    @endif
                     @endforeach
+                    <!-- @endforeach -->
                 </div>
+
+                
 
 
 
