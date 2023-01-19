@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\leader;
+use Illuminate\Support\Facades\Response;
 use Whoops\Run;
 
 /*
@@ -37,6 +38,14 @@ Route::get('/competition/cp', [HomeController::class, 'viewCp'])->name('cp');
 Route::get('/competition/hackathon', [HomeController::class, 'viewHackathon'])->name('hackathon');
 Route::get('/competition/ideation', [HomeController::class, 'viewIdeation'])->name('ideation');
 Route::get('/competition/ctf', [HomeController::class, 'viewCtf'])->name('capturetheflag');
+Route::get('/download', function(){
+    $file = public_path()."/Technostalgia Guide Book.pdf";
+    $header = array(
+        'Content-Type: application/pdf',
+    );
+
+    return Response::download($file, "Technostalgia Guide Book.pdf", $header);
+})->name('download');
 
 //User Route
 Route::group(['middleware'=>'user'], function() {

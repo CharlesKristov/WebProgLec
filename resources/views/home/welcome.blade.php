@@ -8,7 +8,7 @@
       <h1 class="mb-4 pb-0">The Annual<br><span>Technology</span> Competition</h1>
       <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
       <a href="#about" class="about-btn scrollto w-25">About The Event</a>
-      <a href="#downloadGuidebook" class="guide-btn scrollto w-25">Download Guidebook</a>
+      <a href="{{Route('download')}}" class="guide-btn scrollto w-25">Download Guidebook</a>
     </div>
   </section><!-- End Hero Section -->
 
