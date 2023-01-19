@@ -54,6 +54,10 @@ Route::group(['middleware'=>'guest'], function() {
     Route::get('register', [RegisterController::class, 'index'])->name('registerPage');
     Route::post('login', [LoginController::class, 'login'])->name('login');
     Route::post('store_register', [RegisterController::class, 'store'])->name('register');
+    Route::get('forgot', [ForgotPasswordController::class, 'index'])->name('forgotPage');
+    Route::post('forgot', [ForgotPasswordController::class, 'sendlink'])->name('forgot');
+    Route::get('reset/{token}', [ResetPasswordController::class, 'index'])->name('resetPage');
+    Route::post('reset', [ResetPasswordController::class, 'resetpass'])->name('reset');
 });
 
 // Admin routes
@@ -68,10 +72,6 @@ Route::group(['middleware'=>'admin'], function() {
 });
 // Auth routes
 Route::group(['middleware'=>'auth'], function() {
-    Route::get('forgot', [ForgotPasswordController::class, 'index'])->name('forgotPage');
-    Route::post('forgot', [ForgotPasswordController::class, 'sendlink'])->name('forgot');
-    Route::get('reset/{token}', [ResetPasswordController::class, 'index'])->name('resetPage');
-    Route::post('reset', [ResetPasswordController::class, 'resetpass'])->name('reset');
     Route::get('/updateProfile', [DashboardController::class, 'viewUpdateLeader'])->name('updateLeader');
     Route::post('/updateProfile', [LeaderController::class, 'updateProfile'])->name('update');
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
