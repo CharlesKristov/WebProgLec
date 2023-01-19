@@ -10,6 +10,12 @@ use DB;
 class AdminController extends Controller
 {
     public function editMember(Request $request, $id){
+        $request->validate([
+            'Full_Name' => 'required|min:5',
+            'Email' => 'required|email:dns|unique:members',
+            'DOB' => 'required|date',
+            'Phone' => 'required|min:11',
+        ]);
         DB::table('members')
             -> where('id', 'like', $id)
             -> update([
@@ -19,7 +25,7 @@ class AdminController extends Controller
                 'Phone' => $request->get('Phone')
             ]);
 
-        $leader = leader::get()>toQuery()->paginate(3);
+            $leader = leader::where('Role' , 'LIKE', 'user')->paginate(3);
         return view('admin-dashboard.manage-team', 
                 ['leader' => $leader]);
     }
@@ -30,7 +36,7 @@ class AdminController extends Controller
             'Team_Name' => $request->get('Team_Name')
         ]);
 
-        $leader = leader::get()->toQuery()->paginate(3);
+        $leader = leader::where('Role' , 'LIKE', 'user')->paginate(3);
         return view('admin-dashboard.manage-team', 
                 ['leader' => $leader]);
     }

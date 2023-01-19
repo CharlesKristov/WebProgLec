@@ -62,24 +62,44 @@
                             <input type="text" name = "Full_Name" class="form-control" value ="{{ $member->Full_Name}}"></input>
                         </div>
                     </div>
+                    @error('Full_Name')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     <div class="row mb-3">
                         <label class = "col-sm-2 col-form-label text-white"for="">Email</label>
                         <div class="col-sm-10">
                             <input type="text" name = "Email" class="form-control" value ="{{ $member->Email}}"></input>
                         </div>
                     </div>
+                    @error('Email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     <div class="row mb-3">
                         <label class = "col-sm-2 col-form-label text-white"for="">DOB</label>
                         <div class="col-sm-10">
                             <input type="text" name = "DOB" class="form-control" value ="{{ $member->DOB}}"></input>
                         </div>
                     </div>
+                    @error('DOB')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     <div class="row mb-3">
                         <label class = "col-sm-2 col-form-label text-white"for="">Phone</label>
                         <div class="col-sm-10">
                             <input type="text" name = "Phone" class="form-control" value ="{{ $member->Phone}}"></input>
                         </div>
                     </div>
+                    @error('Phone')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     <button type ="submit" class ="btn btn-primary">Submit</button>
                 </form>
             </div>
