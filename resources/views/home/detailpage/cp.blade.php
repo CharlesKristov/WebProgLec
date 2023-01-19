@@ -6,7 +6,9 @@
         <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
             <h1 class="mb-4 pb-0">Technostalgia</h1>
           <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
-          <a href="{{Route('registerPage')}}" class="about-btn scrollto">REGISTER</a>
+          @if(!Auth::check())
+            <a href="{{Route('registerPage')}}" class="about-btn scrollto">REGISTER</a>\
+          @endif
         </div>
     </section><!-- End Hero Section -->
     <br><br><br><br>

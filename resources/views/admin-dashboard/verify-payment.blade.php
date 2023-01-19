@@ -41,10 +41,11 @@
                                     <button disabled type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#{{ $l->Team_Name }}StatiVerify">
                                         Verified
                                     </button>
-                                    @else
+                                    @elseif($l->Payment_Photo!=null)
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#{{ $l->Team_Name }}StatiVerify">
                                         Verify
                                     </button>
+                                    
                                     @endif
                                     <div class="modalTest text-whte">
                                         <!--View Modal -->
