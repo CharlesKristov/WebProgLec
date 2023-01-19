@@ -95,17 +95,36 @@
                         <label for="Full_Name">Full Name</label>
                         <input type="text"
                         class="form-control" name="Full_Name" id="Full_Name" aria-describedby="helpId" placeholder="">
+                        @error('Full_Name')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
 
                         <label for="Email">Email</label>
                         <input type="email" class="form-control" name="Email" id="" aria-describedby="emailHelpId" placeholder="">
-                        
+                        @error('Email')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                         @enderror
+
                         <label class="form-label" for="form3Example1">Date Of Birth</label>
                         <input name="dob" type="date" id="form3Example1" class="form-control">
+                        @error('dob')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                         @enderror
                         
                         <label for="Phone">Phone Number</label>
                         <input type="text"
                         class="form-control" name="Phone" id="Phone" aria-describedby="helpId" placeholder="">
-
+                        @error('Phone')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                         <button type="submit" class="btn btn-primary mt-3">Add Member!</button>
 
                     @endif

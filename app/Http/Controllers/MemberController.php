@@ -42,10 +42,10 @@ class MemberController extends Controller
 
         // dd($leader->id);
         $request->validate([
-            'Full_Name' => 'required',
+            'Full_Name' => 'required|min:5',
             'Email' => 'required|email:dns|unique:members',
             'dob' => 'required|date',
-            'Phone' => 'required',
+            'Phone' => 'required|min:11',
         ]);
         $member = new member($request->only(['Full_Name', 'Email', 'dob', 'Phone']));
         $leader->members()->save($member);
