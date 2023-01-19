@@ -1,8 +1,8 @@
 @extends('layout.app')
-@section('title', 'Capture The Flag')  
+@section('title', 'Capture The Flag')
 @section('main-content')
 <body>
-  
+
 
     <section id="hero" style="height: 50vh">
         <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
@@ -10,8 +10,8 @@
           <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
           @if(!Auth::check())
             <a href="{{Route('registerPage')}}" class="about-btn scrollto w-25">REGISTER</a>
-            <a href="{{Route('download')}}" class="guide-btn scrollto w-25">Download Guidebook</a>
-          @endif
+
+          @endif<a href="{{Route('download')}}" class="guide-btn scrollto w-25">Download Guidebook</a>
         </div>
       </section><!-- End Hero Section -->
     <br><br><br><br>
@@ -22,7 +22,7 @@
         <hr>
         <p>Capture the Flag (CTF) adalah kompetisi keamanan jaringan dan informasi berskala nasional yang diselenggarakan secara online pada tahap penyisihan dan offline pada tahap final. Kompetisi Capture the Flag COMPFEST kali ini memakai konsep Jeopardy CTF untuk babak penyisihan dan final. Konsep tersebut akan menguji kemampuan dan pengetahuan peserta dalam bidang web hacking, cryptography, digital forensic, reverse engineering, dan binary exploitation.</p>
         <p>Tidak hanya itu, Capture the Flag COMPFEST juga membawakan rangkaian acara opsional, yaitu Hacker Class. Hacker Class adalah babak opsional yang dikemas untuk mengenalkan peserta kepada Capture the Flag sekaligus menjadi wadah bagi peserta untuk berlatih mengenai bidang-bidang yang akan dilombakan. Hacker Class sendiri akan diadakan secara online sebelum babak penyisihan dimulai.</p>
-        
+
         <br>
         <h3>KETENTUAN KHUSUS</h3>
         <hr>
@@ -64,7 +64,7 @@
         <br>
         <h3>BABAK FINAL</h3>
         <hr>
-        
+
         <ol type = "a">
           <li>Final akan dilaksanakan secara onsite.</li>
           <li>Tahap final menggunakan format jeopardy dengan soal sebanyak 15 soal.</li>
@@ -77,6 +77,6 @@
 
         </div>
     </div>
-   
+
 </body>
 @endsection

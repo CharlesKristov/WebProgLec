@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Competitive Programming')  
+@section('title', 'Competitive Programming')
 @section('main-content')
     <section id="hero" style="height: 50vh">
         <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
@@ -8,8 +8,9 @@
           <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
           @if(!Auth::check())
             <a href="{{Route('registerPage')}}" class="about-btn scrollto w-25">REGISTER</a>
-            <a href="{{Route('download')}}" class="guide-btn scrollto w-25">Download Guidebook</a>
+
           @endif
+          <a href="{{Route('download')}}" class="guide-btn scrollto w-25">Download Guidebook</a>
         </div>
     </section><!-- End Hero Section -->
     <br><br><br><br>
@@ -18,10 +19,10 @@
             <div class= "container" style ="background-color:white; color:gray">
                 <h3>DESKRIPSI</h3>
                 <hr>
-                <p>Lomba pemrograman menguji kemampuan dan nalar 
-                    peserta dalam menyelesaikan program komputer untuk 
-                    memecahkan permasalahan yang diberikan. Kriteria penilaian 
-                    mencakup kecepatan penulisan program dan ketepatan/efisiensi 
+                <p>Lomba pemrograman menguji kemampuan dan nalar
+                    peserta dalam menyelesaikan program komputer untuk
+                    memecahkan permasalahan yang diberikan. Kriteria penilaian
+                    mencakup kecepatan penulisan program dan ketepatan/efisiensi
                     dari program yang dibuat untuk setiap kasus permasalahan terkait.</p>
                 <p>
                 Saat pertandingan, peserta akan diberikan deskripsi-deskripsi sejumlah permasalahan dan dalam kurun waktu 3-5 jam peserta harus menyusun dan mengumpulkan sebanyak mungkin program yang dapat menjawab masing-masing permasalahan tersebut.
@@ -63,7 +64,7 @@
                         </ul>
                     </li>
                 </ol>
-                
+
                 <br>
                 <h3>BABAK FINAL</h3>
                 <hr>
@@ -84,6 +85,6 @@
                     <li>Tidak melakukan plagiarisme.</li>
                 </ol>
 
-            </div>  
+            </div>
         </div>
 @endsection

@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Hackathon')  
+@section('title', 'Hackathon')
 @section('main-content')
 <body>
     <section id="hero" style="height: 50vh">
@@ -8,8 +8,8 @@
           <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
           @if(!Auth::check())
             <a href="{{Route('registerPage')}}" class="about-btn scrollto w-25">REGISTER</a>
-            <a href="{{Route('download')}}" class="guide-btn scrollto w-25">Download Guidebook</a>
-         @endif
+
+         @endif<a href="{{Route('download')}}" class="guide-btn scrollto w-25">Download Guidebook</a>
         </div>
       </section><!-- End Hero Section -->
     <br><br><br><br>
