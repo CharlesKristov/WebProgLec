@@ -8,22 +8,17 @@
         <div class="container mt-5 h-100 p-5">
             <h2 class = "mt-5 text-white">Update data</h2>
             <h4 class = "mt-5 text-white">Team data</h4>
-            <form class>
+            <form class action ="{{ Route('update-team', ['id' => $leader->id] ) }}">
                 <div class="row mb-3">
                     <label class = "col-sm-2 col-form-label text-white"for="">Name</label>
                     <div class="col-sm-10">
-                        <input disabled type="text" name = "leader" class="form-control" value ="{{ $leader->Team_Name }}"></input>
+                        <input type="text" name = "Team_Name" class="form-control" value ="{{ $leader->Team_Name }}"></input>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <label class = "col-sm-2 col-form-label text-white"for="">Payment Status</label>
-                    <div class="col-sm-10">
-                        <input disabled type="text" name = "leader" class="form-control" value ="{{ $leader->Payment_Status }}"></input>
-                    </div>
-                </div>
+                <button type ="submit" class ="btn btn-primary">Update</button>
             </form>
             <!-- update team -->
-            <a href = "#" class = "btn btn-primary">Update</a>
+       
 
             <h4 class = "mt-5 text-white">Leader data</h4>
             <form class>

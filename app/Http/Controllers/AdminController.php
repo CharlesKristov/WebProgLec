@@ -19,7 +19,18 @@ class AdminController extends Controller
                 'Phone' => $request->get('Phone')
             ]);
 
-        $leader = leader::get();
+        $leader = leader::get()>toQuery()->paginate(3);
+        return view('admin-dashboard.manage-team', 
+                ['leader' => $leader]);
+    }
+
+    public function editTeam(Request $request, $id){
+        DB::table('leaders')->where('id', 'like', $id)
+        ->update([
+            'Team_Name' => $request->get('Team_Name')
+        ]);
+
+        $leader = leader::get()->toQuery()->paginate(3);
         return view('admin-dashboard.manage-team', 
                 ['leader' => $leader]);
     }

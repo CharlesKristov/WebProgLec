@@ -63,6 +63,7 @@ Route::group(['middleware'=>'admin'], function() {
     Route::get('admin/verify/{id}', [AdminController::class, 'verifyPayment'])->name('verify');
     Route::get('admin/update/{id}', [AdminController::class, 'update'])->name('view-update');
     Route::get('admin/destroy/{id}', [AdminController::class, 'destroy'])->name('destroy-member');
+    Route::get('admin/updateteam/{id}', [AdminController::class, 'editTeam'])->name('update-team');
     Route::patch('admin/updatemember/{id}', [AdminController::class, 'editMember'])->name('update-member');
 });
 // Auth routes
