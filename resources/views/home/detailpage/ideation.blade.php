@@ -7,7 +7,8 @@
           <h1 class="mb-4 pb-0">Technostalgia</h1>
           <p class="mb-4 pb-0">Brings You Back The Nostalgic of Challenging Competition</p>
           @if(!Auth::check())
-            <a href="{{Route('registerPage')}}" class="about-btn scrollto">REGISTER</a>\
+            <a href="{{Route('registerPage')}}" class="about-btn scrollto w-25">REGISTER</a>
+            <a href="#downloadGuidebook" class="guide-btn scrollto w-25">Download Guidebook</a>
          @endif
         </div>
       </section><!-- End Hero Section -->
