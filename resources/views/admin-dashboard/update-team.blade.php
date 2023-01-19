@@ -59,7 +59,7 @@
                     <div class="row mb-3">
                         <label class = "col-sm-2 col-form-label text-white"for="">Full Name</label>
                         <div class="col-sm-10">
-                            <input type="text" name = "Full_Name" class="form-control" value ="{{ $member->Full_Name}}"></input>
+                            <input type="text" name = "Full_Name" class="form-control @error('Full_Name')is-invalid @enderror" value ="{{ $member->Full_Name}}"></input>
                         </div>
                     </div>
                     @error('Full_Name')
@@ -70,7 +70,7 @@
                     <div class="row mb-3">
                         <label class = "col-sm-2 col-form-label text-white"for="">Email</label>
                         <div class="col-sm-10">
-                            <input type="text" name = "Email" class="form-control" value ="{{ $member->Email}}"></input>
+                            <input type="text" name = "Email" class="form-control @error('Email')is-invalid @enderror" value ="{{ $member->Email}}"></input>
                         </div>
                     </div>
                     @error('Email')
@@ -81,7 +81,7 @@
                     <div class="row mb-3">
                         <label class = "col-sm-2 col-form-label text-white"for="">DOB</label>
                         <div class="col-sm-10">
-                            <input type="text" name = "DOB" class="form-control" value ="{{ $member->DOB}}"></input>
+                            <input type="text" name = "DOB" class="form-control @error('DOB')is-invalid @enderror" value ="{{ $member->DOB}}"></input>
                         </div>
                     </div>
                     @error('DOB')
@@ -92,7 +92,7 @@
                     <div class="row mb-3">
                         <label class = "col-sm-2 col-form-label text-white"for="">Phone</label>
                         <div class="col-sm-10">
-                            <input type="text" name = "Phone" class="form-control" value ="{{ $member->Phone}}"></input>
+                            <input type="text" name = "Phone" class="form-control @error('Phone')is-invalid @enderror" value ="{{ $member->Phone}}"></input>
                         </div>
                     </div>
                     @error('Phone')

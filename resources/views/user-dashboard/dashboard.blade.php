@@ -94,7 +94,7 @@
                         <h3>Add Member:</h3>
                         <label for="Full_Name">Full Name</label>
                         <input type="text"
-                        class="form-control" name="Full_Name" id="Full_Name" aria-describedby="helpId" placeholder="">
+                        class="form-control @error('Full_Name')is-invalid @enderror" name="Full_Name" id="Full_Name" aria-describedby="helpId" placeholder="">
                         @error('Full_Name')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -102,7 +102,7 @@
                         @enderror
 
                         <label for="Email">Email</label>
-                        <input type="email" class="form-control" name="Email" id="" aria-describedby="emailHelpId" placeholder="">
+                        <input type="email" class="form-control @error('Email')is-invalid @enderror" name="Email" id="" aria-describedby="emailHelpId" placeholder="">
                         @error('Email')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -110,7 +110,7 @@
                          @enderror
 
                         <label class="form-label" for="form3Example1">Date Of Birth</label>
-                        <input name="dob" type="date" id="form3Example1" class="form-control">
+                        <input name="dob" type="date" id="form3Example1" class="form-control @error('dob')is-invalid @enderror">
                         @error('dob')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -119,7 +119,7 @@
                         
                         <label for="Phone">Phone Number</label>
                         <input type="text"
-                        class="form-control" name="Phone" id="Phone" aria-describedby="helpId" placeholder="">
+                        class="form-control @error('Phone')is-invalid @enderror" name="Phone" id="Phone" aria-describedby="helpId" placeholder="">
                         @error('Phone')
                             <div class="invalid-feedback">
                                 {{ $message }}
